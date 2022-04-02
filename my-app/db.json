@@ -1,0 +1,24 @@
+{
+  "category": [
+    {
+      "name": "Sản phẩm nam",
+      "img": "https://cdn-images.kooding.com/bannerItem/desktop/744/b73e22086649f83faf574bd5cdac46b5467bf53f.jpeg",
+      "id": 1
+    },
+    {
+      "name": "Thời trang nữ cá tính",
+      "img": "https://cdn-images.kooding.com/bannerItem/desktop/726/32d2d959ad315632720f23b6fb8dd6c1f2bbd66d.jpeg",
+      "id": 2
+    },
+    {
+      "name": "Thời trang Unisex",
+      "img": "https://cdn-images.kooding.com/bannerItem/mobile/753/75bd6ff35d43a5f2b3b0fcef99035e097c24c20f.jpg",
+      "id": 3
+    },
+    {
+      "name": "Thời trang nam trẻ trung",
+      "img": "https://cdn-images.kooding.com/bannerItem/desktop/713/83c9810f52893ae2f7075ef7dafb7d58f4acd523.jpeg",
+      "id": 4
+    }
+  ]
+}

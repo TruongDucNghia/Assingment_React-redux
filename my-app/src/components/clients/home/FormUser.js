@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 
 
 const FormUser = () => {
   const isUser = localStorage.getItem('user')
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
-  const navigate = useNavigate()
   const onSubmitRegister = async (data) => {
     // await registers({ ...data, roleId: 0 })
     // alert("Đăng ký tài khoản thành công!")
