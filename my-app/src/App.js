@@ -7,6 +7,9 @@ import AddCate from './page/PageAdmin/category/AddCate';
 import ListCate from './page/PageAdmin/category/List';
 import UpdateCate from './page/PageAdmin/category/UpdateCate';
 import Dashboard from './page/PageAdmin/Dashboard';
+import AddProduct from './page/PageAdmin/products/AddProduct';
+import ListProducts from './page/PageAdmin/products/listProducts';
+import UpdateProduct from './page/PageAdmin/products/UpdateProduct';
 
 function App() {
   return (
@@ -23,6 +26,13 @@ function App() {
           <Route path="list" element={<ListCate/>} />
           <Route path="add" element={<AddCate/>} />
           <Route path=":id/update" element={<UpdateCate/>} />
+          
+        </Route>
+        <Route path="products">
+          <Route index element={<Navigate to="list"/>}/>
+          <Route path="list" element={<ListProducts/>} />
+          <Route path="add" element={<AddProduct/>} />
+          <Route path=":id/update" element={<UpdateProduct/>} />
           
         </Route>
       </Route>

@@ -1,10 +1,5 @@
 {
-  "category": [
-    {
-      "name": "Sản phẩm nam",
-      "img": "https://cdn-images.kooding.com/bannerItem/desktop/744/b73e22086649f83faf574bd5cdac46b5467bf53f.jpeg",
-      "id": 1
-    },
+  "categorys": [
     {
       "name": "Thời trang nữ cá tính",
       "img": "https://cdn-images.kooding.com/bannerItem/desktop/726/32d2d959ad315632720f23b6fb8dd6c1f2bbd66d.jpeg",
@@ -16,9 +11,99 @@
       "id": 3
     },
     {
-      "name": "Thời trang nam trẻ trung",
+      "name": "Thời trang nam trẻ trung update",
       "img": "https://cdn-images.kooding.com/bannerItem/desktop/713/83c9810f52893ae2f7075ef7dafb7d58f4acd523.jpeg",
       "id": 4
+    },
+    {
+      "name": "sản phẩm thời thượng",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649060903/c7ddqy2m3c00u0t1hwh2.jpg",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "name": "Fiona Shine Ribbon Tweed Blouse Skirt Set",
+      "price": "1000000",
+      "categoryId": "2",
+      "color": [
+        [
+          [
+            "xanh",
+            " do",
+            " tim vang"
+          ]
+        ]
+      ],
+      "description": "hello hello",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649085387/mbkcqhc5of8qdtcksyuk.jpg",
+      "size": [
+        2,
+        5,
+        4
+      ],
+      "createdAt": 1649135652498,
+      "view": 0,
+      "id": 1
+    },
+    {
+      "name": "Envy Look World Comfort Double Pintuck Long Slacks",
+      "price": "1200000",
+      "categoryId": "3",
+      "color": [
+        "xanh",
+        " dotham",
+        " vang"
+      ],
+      "description": "hi hi",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649087287/dddv62akj4am7310qszf.jpg",
+      "size": [
+        "XL",
+        "XXL",
+        "M"
+      ],
+      "createdAt": 1649087318357,
+      "view": 0,
+      "id": 2
+    },
+    {
+      "name": "Fiona Girlish Dream A Line Mini Skirt",
+      "price": "500000",
+      "categoryId": "5",
+      "color": [
+        "vang"
+      ],
+      "description": "alo alo\n",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649129468/xiocjgbz8u86y3ikgz7r.jpg",
+      "size": [
+        "XL",
+        "SM"
+      ],
+      "createdAt": 1649129480219,
+      "view": 0,
+      "id": 4
+    }
+  ],
+  "size": [
+    {
+      "id": 1,
+      "name": "XXL"
+    },
+    {
+      "id": 2,
+      "name": "XL"
+    },
+    {
+      "id": 3,
+      "name": "M"
+    },
+    {
+      "id": 4,
+      "name": "SM"
+    },
+    {
+      "id": 5,
+      "name": "S"
     }
   ]
 }

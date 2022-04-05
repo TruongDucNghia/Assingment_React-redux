@@ -16,11 +16,14 @@ const ListCate = () => {
         dispatch(getCategorys())
     }, [])
     const handleDeleteCate = (id) => {
-        const deleteCate = () =>{
-            dispatch(deleteCategorys(id))
+        const action = window.confirm('Bạn chắc có muốn xóa danh mục này ?')
+        if(action){
+            const deleteCate = () =>{
+                dispatch(deleteCategorys(id))
+            }
+            deleteCate()
+            toastMess()
         }
-        deleteCate()
-        toastMess()
     }  
   return (
     <div>
