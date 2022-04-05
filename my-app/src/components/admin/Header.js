@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 
 const Header = (props) => {
@@ -12,12 +13,12 @@ const Header = (props) => {
                         </button>
                     </div>
                     <div>
-                        <a className="navbar-brand brand-logo" href="index.html">
+                        <NavLink className="navbar-brand brand-logo" to="/">
                             <img src="img/logo-main.png" alt="logo" />
-                        </a>
-                        <a className="navbar-brand brand-logo-mini" href="index.html">
+                        </NavLink>
+                        <NavLink className="navbar-brand brand-logo-mini" to="/">
                             <img src="img/kooding-app-icon.png" alt="logo" />
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="navbar-menu-wrapper d-flex align-items-top">

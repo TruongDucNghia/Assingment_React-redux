@@ -1,26 +1,33 @@
 import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
 import { NavLink} from 'react-router-dom'
+import { signups } from '../../../features/UserSlice'
+import { ToastContainer, toast } from 'react-toastify';
+import FormSignin from './FormSignin'
 
 
 const FormUser = () => {
   const isUser = localStorage.getItem('user')
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
-  const onSubmitRegister = async (data) => {
-    // await registers({ ...data, roleId: 0 })
-    // alert("Đăng ký tài khoản thành công!")
-    // navigate('/')
-    // reset()
-    console.log(data);
+  const toastMess = () => toast.success('Chúc mừng bạn đăng ký thành công !')
+  const dispatch = useDispatch()
+  const onSubmitRegister =  (data) => {
+    const roleId = 0
+    dispatch(signups({...data, roleId}))
+    toastMess()
+    reset()
 
   }
   function handlerLogout(e){
     e.preventDefault()
-    localStorage.removeItem('user')
+    // localStorage.removeItem('user')
+    console.log('logout');
     
   }
   return (
     <div>
+      <ToastContainer autoClose={2000}/>
       <div className="user-options">
         <div className="search-rp" />
         {/* khi đã đăng nhập thành công */}
@@ -59,33 +66,48 @@ const FormUser = () => {
                 </div>
                 {/* mess form */}
                 {/* <div class="bg-danger"></div> */}
-                {/* <FormLogin /> */}
+                <FormSignin/>
                 {/* register */}
                 <form onSubmit={handleSubmit(onSubmitRegister)} encType="multipart/form-data" name="form-register" id="register_user" className="p-5">
                   <div className="errRegister" style={{ color: 'red' }}>
                   </div>
                   <div className="form-group">
-                    <input {...register('username')} type="text" name="username" id="username" placeholder="Tên đầy đủ" className="fullname" />
+                    <input {...register('username', {required: true})} type="text" name="username" id="username" placeholder="Tên đầy đủ" className="fullname" />
+                    <p style={{ color: 'red' }}>{errors.username?.type === 'required' && "Bạn không được để trống trường này !"}</p>
                   </div>
                   <div className="form-group">
-                    <input {...register('email')} type="text" name="email" id="email_register" placeholder="Nhập email" className=" email" />
+                    <input {...register('email', {required: true, pattern:{
+                      value: /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/,
+                      message: "Bạn phải nhập đúng email"
+                    }})} type="text" name="email" id="email_register" placeholder="Nhập email" className=" email" />
+                    <p style={{ color: 'red' }}>{errors.email?.message}</p>
+                    <p style={{ color: 'red' }}>{errors.email?.type === 'required' && "Bạn không được để trống trường này !"}</p>
+
                   </div>
                   <div className="form-group">
-                    <input {...register('password')} type="password" name="password" placeholder="Nhập mật khẩu" className=" password" id="pass_register" />
+                    <input {...register('password', {required: true, minLength: 6})} type="password" name="password" placeholder="Nhập mật khẩu" className=" password" id="pass_register" />
+                    <p style={{ color: 'red' }}>{errors.password?.type === 'required' && "Bạn không được để trống trường này !"}</p>
+                    <p style={{ color: 'red' }}>{errors.password?.type === 'minLength' && "Mật khẩu ít nhất 6 ký tự !"}</p>
                   </div>
                   <div className="form-group">
-                    <input {...register('birthday')} type="date" name="birthday" id="birthday" placeholder="Ngày sinh của bạn" className="birthday" />
+                    <input {...register('birthday', {required: true})} type="date" name="birthday" id="birthday" placeholder="Ngày sinh của bạn" className="birthday" />
+                    <p style={{ color: 'red' }}>{errors.birthday?.type === 'required' && "Bạn không được để trống trường này !"}</p>
                   </div>
                   <div className="form-group">
-                    <input {...register('phone')} type="text" name="phone" id="phone" placeholder="Số điện thoại của bạn" className="phone" />
+                    <input {...register('phone', {required: true, pattern:{
+                      value: /^[0-9]{0,156}$/,
+                      message: "Vui lòng nhập đúng định dạng sđt"
+                    }})} type="text" name="phone" id="phone" placeholder="Số điện thoại của bạn" className="phone" />
+                    <p style={{ color: 'red' }}>{errors.phone?.message}</p>
+                    <p style={{ color: 'red' }}>{errors.phone?.type === 'required' && "Bạn không được để trống trường này !"}</p>
                   </div>
                   <div className="gender col-md-12 mb-4 mt-4">
                     <div className="form-check-inline" style={{ display: "flex", justifyItems: "center", alignItems: 'center' }}>
-                      <input {...register('gender')} className="" defaultValue={0} id="gender" type="radio" name="gender" defaultChecked />
+                      <input {...register('gender')} defaultValue={0} id="gender" type="radio" name="gender" defaultChecked />
                       <label htmlFor="gender" className="form-check-label mr-4">
                         Nam
                       </label>
-                      <input {...register('gender')} className="" defaultValue={1} id="gender2" type="radio" name="gender" />
+                      <input {...register('gender')} defaultValue={1} id="gender2" type="radio" name="gender" />
                       <label htmlFor="gender2" className="form-check-label">
                         Nữ
                       </label>

@@ -53,7 +53,7 @@ const ListProducts = () => {
                         <td>{item.price}</td>
                         <td>{item.size.map(i => i + ',')}</td>
                         <td>{item.color.map(i => i + ',')}</td>
-                        <td>{item.description}</td>
+                        <td>{item.description.slice(0, 15)}...</td>
                         
                         <td>
                             <NavLink to={`/admin/products/${item.id}/update`}>

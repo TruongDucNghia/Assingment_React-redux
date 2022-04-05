@@ -29,3 +29,8 @@ export const updateProduct = (data) =>{
     const url = `/products/${data.id}`
     return instance.put(url, data)
 }
+
+export const get10ProductNew = () =>{
+    const url = `/products?_sort=createdAt&_order=desc&_limit=10`
+    return instance.get(url)
+}

@@ -34,6 +34,7 @@ export const updateProducts = createAsyncThunk(
     }
 )
 
+
 const ProductSlice = createSlice({
     name: 'products',
     initialState: {

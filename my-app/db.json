@@ -27,22 +27,21 @@
       "price": "1000000",
       "categoryId": "2",
       "color": [
-        [
-          [
-            "xanh",
-            " do",
-            " tim vang"
-          ]
-        ]
+        "xanh",
+        "do",
+        "tim vang",
+        "den"
       ],
       "description": "hello hello",
       "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649085387/mbkcqhc5of8qdtcksyuk.jpg",
       "size": [
         2,
         5,
-        4
+        4,
+        "M",
+        "S"
       ],
-      "createdAt": 1649135652498,
+      "createdAt": 1649166526073,
       "view": 0,
       "id": 1
     },
@@ -52,8 +51,8 @@
       "categoryId": "3",
       "color": [
         "xanh",
-        " dotham",
-        " vang"
+        "dotham",
+        "vang"
       ],
       "description": "hi hi",
       "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649087287/dddv62akj4am7310qszf.jpg",
@@ -62,26 +61,346 @@
         "XXL",
         "M"
       ],
-      "createdAt": 1649087318357,
+      "createdAt": 1649166481093,
       "view": 0,
       "id": 2
     },
     {
-      "name": "Fiona Girlish Dream A Line Mini Skirt",
+      "name": "Fiona Girlish Dream A Line Mini Skirt hjhj",
       "price": "500000",
       "categoryId": "5",
       "color": [
-        "vang"
+        " vang",
+        " do tham"
       ],
       "description": "alo alo\n",
-      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649129468/xiocjgbz8u86y3ikgz7r.jpg",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649163668/qogiwkpurlltarbeozc0.jpg",
       "size": [
         "XL",
         "SM"
       ],
-      "createdAt": 1649129480219,
+      "createdAt": 1649166490011,
       "view": 0,
       "id": 4
+    },
+    {
+      "name": "Envy Look World Comfort Double Pintuck Long Slacks",
+      "price": "1000000",
+      "categoryId": "2",
+      "color": [
+        "xanh",
+        " vang",
+        " hong"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649166886/ibl73leks4x7smd5hpwh.jpg",
+      "size": [
+        "M",
+        "XL"
+      ],
+      "createdAt": 1649166967053,
+      "view": 0,
+      "id": 5
+    },
+    {
+      "name": "Envy Look All Season Skirt",
+      "price": "10000000",
+      "categoryId": "2",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167102/ara6q9pmihip6oylkhih.jpg",
+      "size": [
+        "XXL",
+        "XL"
+      ],
+      "createdAt": 1649167112542,
+      "view": 0,
+      "id": 6
+    },
+    {
+      "name": "Envy Look All Season Skirt 1",
+      "price": "10000000",
+      "categoryId": "4",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167481/oy34kcm6bkm29zoo7elt.jpg",
+      "size": [
+        "XXL",
+        "XL"
+      ],
+      "createdAt": 1649167480614,
+      "view": 0,
+      "id": 7
+    },
+    {
+      "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks",
+      "price": "1200000",
+      "categoryId": "4",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167135/it1l7hwuaczohpxcmvgl.jpg",
+      "size": [
+        "XXL",
+        "XL"
+      ],
+      "createdAt": 1649167142287,
+      "view": 0,
+      "id": 8
+    },
+    {
+      "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks 1",
+      "price": "1200000",
+      "categoryId": "4",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167181/z933z67zctbuoueqvwo2.jpg",
+      "size": [
+        "XXL",
+        "XL"
+      ],
+      "createdAt": 1649169166222,
+      "view": 0,
+      "id": 9
+    },
+    {
+      "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks",
+      "price": "1200000",
+      "categoryId": "4",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167195/k4gusookwecnquu8zlzs.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167195894,
+      "view": 0,
+      "id": 10
+    },
+    {
+      "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks hi",
+      "price": "1300000",
+      "categoryId": "4",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167218/lxlrhhbstiufs8q1xdgz.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167217777,
+      "view": 0,
+      "id": 11
+    },
+    {
+      "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks hi",
+      "price": "1300000",
+      "categoryId": "5",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167235/x8j8gbv2onzcmtsb8hbq.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167234717,
+      "view": 0,
+      "id": 12
+    },
+    {
+      "name": "Envy Look Wish Blouse 1",
+      "price": "1300000",
+      "categoryId": "5",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167256/c1uxs0cwsua2txdreajf.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167255753,
+      "view": 0,
+      "id": 13
+    },
+    {
+      "name": "Envy Look Wish Blouse 1",
+      "price": "1300000",
+      "categoryId": "5",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167267/q4fkz326yqsw2euxq4p5.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167266108,
+      "view": 0,
+      "id": 14
+    },
+    {
+      "name": "Fiona Shy Tweed Twinkle Jacket Skirt Set",
+      "price": "1300000",
+      "categoryId": "5",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167279/bqenrhe18joz4te5omii.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167279001,
+      "view": 0,
+      "id": 15
+    },
+    {
+      "name": "Fiona Shy Tweed Twinkle Jacket Skirt Set",
+      "price": "1300000",
+      "categoryId": "3",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167300/qstjmsa5qov6k3ahb9sd.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167299854,
+      "view": 0,
+      "id": 16
+    },
+    {
+      "name": "LEESLE Unisex Hanbok Chosun Pants Black",
+      "price": "1300000",
+      "categoryId": "3",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167311/w96opk91m2reydvw7iwo.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167310181,
+      "view": 0,
+      "id": 17
+    },
+    {
+      "name": "LEESLE Unisex Hanbok Chosun Pants Black",
+      "price": "1300000",
+      "categoryId": "3",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167328/khhtznylfpy0e02joild.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167327771,
+      "view": 0,
+      "id": 18
+    },
+    {
+      "name": "LEESLE Unisex Hanbok Chosun Pants Black 2",
+      "price": "1300000",
+      "categoryId": "3",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167338/u1eu61cvshtfkoajjjhy.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167338015,
+      "view": 0,
+      "id": 19
+    },
+    {
+      "name": "LEESLE Unisex Hanbok Chosun Pants Black 2",
+      "price": "1300000",
+      "categoryId": "3",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167354/griyle5zvb06dxea3scl.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167354833,
+      "view": 0,
+      "id": 20
+    },
+    {
+      "name": "Benito The Net Dress",
+      "price": "1300000",
+      "categoryId": "3",
+      "color": [
+        "xanh",
+        " vang"
+      ],
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167372/wf08onzjcltevjnpzb38.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "S"
+      ],
+      "createdAt": 1649167371375,
+      "view": 0,
+      "id": 21
     }
   ],
   "size": [
@@ -104,6 +423,28 @@
     {
       "id": 5,
       "name": "S"
+    }
+  ],
+  "users": [
+    {
+      "email": "nghia@gmail.com",
+      "password": "$2a$10$RxwbEswAyjh/Bb4FaPDCHO2ZtdW1nsJ3sao3ISprr2UhUVXoiuu9C",
+      "username": "Trương Nghĩa",
+      "birthday": "2002-08-03",
+      "phone": "0372559460",
+      "gender": "0",
+      "roleId": 0,
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$MHYmfz/vKFUTuC8tqIWoW.cqfqC2NU.kUQB6iIfYs6vm7ZvILSr3m",
+      "username": "Admin",
+      "birthday": "2022-04-06",
+      "phone": "11111111",
+      "gender": "0",
+      "roleId": 1,
+      "id": 2
     }
   ]
 }

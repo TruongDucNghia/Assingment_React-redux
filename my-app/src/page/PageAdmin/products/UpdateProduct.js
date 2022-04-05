@@ -69,17 +69,21 @@ const UpdateProduct = () => {
       document.querySelector('#errImg').innerHTML = 'Bạn phải nhập trường dữ liệu này !'
       document.querySelector('#errSize').innerHTML = 'Bạn phải nhập trường dữ liệu này !'
     }else{
+      // if(Array.isArray(data.color)){
+      //   setColor(data.color)
+      // }else{
+      //   setColor(data.color.split(', '))
+      // }
         document.querySelector('#errImg').innerHTML = ''
         document.querySelector('#errSize').innerHTML = ''
-        const color = [data.color]
+        const color = document.querySelector('.color').value.split(',')
+
         const datas = {...data, img, size, color, createdAt}
         dispatch(updateProducts(datas))
         toastMess()
         setTimeout(() =>{
             navigate('/admin/products')
         },2500)
-        console.log(datas);
-        console.log(data);
     }
   }
   return (
@@ -142,7 +146,7 @@ const UpdateProduct = () => {
 
         <div className="form-group">
           <label >Color</label>
-          <input {...register('color', { required: true })} type="text" className="form-control p-input" placeholder="Enter colors separated by commas" />
+          <input {...register('color', { required: true })} type="text" className="color form-control p-input" placeholder="Enter colors separated by commas" />
           <p style={{ color: 'red' }}>{errors.color?.type === 'required' && "Bạn không được để trống trường này !"}</p>
         </div>
 
