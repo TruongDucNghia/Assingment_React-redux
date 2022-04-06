@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { addProduct, deleteProduct, getProduct, updateProduct } from '../api/products'
+import { addProduct, deleteProduct, getProduct, getProductsCate, updateProduct } from '../api/products'
 
 
 export const addProducts = createAsyncThunk(
@@ -22,6 +22,14 @@ export const deleteProducts = createAsyncThunk(
     'product/deleteProduct',
     async (id) =>{
         const {data} = await deleteProduct(id)
+        return data
+    }
+)
+
+export const getProductsToCate = createAsyncThunk(
+    'product/getProductsCate',
+    async (id) =>{
+        const {data} = await getProductsCate(id)
         return data
     }
 )
@@ -53,6 +61,9 @@ const ProductSlice = createSlice({
         builder.addCase(updateProducts.fulfilled, (state, actions) =>{
             const productUpdtae =  state.value.map(item => item.id === actions.payload.id ? actions.payload : item)
             state.value = productUpdtae
+        })
+        builder.addCase(getProductsToCate.fulfilled, (state, actions) =>{
+            state.value = actions.payload
         })
     }
 })

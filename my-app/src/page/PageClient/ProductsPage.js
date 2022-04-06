@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { NavLink, useParams } from 'react-router-dom'
+import { getProductsToCate } from '../../features/ProductSlice'
 
 const ProductsPage = () => {
+    const {id} = useParams()
+    // const [listProduct, setListProduct] = useState()
+    const dispatch = useDispatch()
+    useEffect(() =>{
+        dispatch(getProductsToCate(id))
+    }, [id]);
+    const products = useSelector((state) => state.product.value)
+    // setListProduct(0)
+    // console.log(listProduct);
     return (
         <div>
             <main className="body__product">
                 <div className="product__header">
                     <div className="proH__title">
-                        <p>Thời trang nam</p>
+                        <h3>{products?.name}</h3>
                     </div>
                     <div className="proH__text1">
-                        <p>(11 mặt hàng)</p>
+                        <p>({products?.products?.length} sản phẩm)</p>
                     </div>
                     <div className="proH__text2">
                         <p>Bạn đang tìm kiếm những sản phẩm hoàn hảo phù hợp với mọi thứ hay chiếc váy dễ thương nhất lấy cảm
@@ -54,18 +66,19 @@ const ProductsPage = () => {
                     {/* <div class="" id="test"></div> */}
                     <div className="proC__show">
                         <div className="proC__allItem">
+                            {products?.products?.map(item => 
                             <form action="productFavoriteClient" method="GET" className="proC__item">
                                 <div className="proC__item__img">
-                                    <a href="productDetail?action=viewDetail&id=84">
-                                        <img src="./img/product1.jpg " alt width="100%" />
-                                    </a>
+                                    <NavLink to={`/products/${item?.id}/detail`}>
+                                        <img src={item?.img} alt width="100%" />
+                                    </NavLink>
                                 </div>
                                 <div className="proC__item__Name">
-                                    <p>Cadigan</p>
+                                    <p>{item?.name}</p>
                                 </div>
                                 <div className="proC__item__PC">
                                     <div className="proC__item__price">
-                                        <p>2.480.000đ</p>
+                                        <p>{Number(item?.price).toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}</p>
                                     </div>
                                     <div className="proC__item__color">
                                         <img src="public/images/layout/colorwheel-2.png" alt />
@@ -78,10 +91,11 @@ const ProductsPage = () => {
                                         <input type="hidden" className="pro_id" name="pro_id" defaultValue={84} />
                                     </span>
                                 </div>
-                                <div className="proC__sale">
+                                {/* <div className="proC__sale">
                                     <p className="item__sale">-1%</p>
-                                </div>
-                            </form>
+                                </div> */}
+                            </form>)}
+                            
                             
                         </div>
                         {/* end copy */}

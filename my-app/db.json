@@ -25,7 +25,7 @@
     {
       "name": "Fiona Shine Ribbon Tweed Blouse Skirt Set",
       "price": "1000000",
-      "categoryId": "2",
+      "categoryId": 2,
       "color": [
         "xanh",
         "do",
@@ -48,7 +48,7 @@
     {
       "name": "Envy Look World Comfort Double Pintuck Long Slacks",
       "price": "1200000",
-      "categoryId": "3",
+      "categoryId": 3,
       "color": [
         "xanh",
         "dotham",
@@ -68,7 +68,7 @@
     {
       "name": "Fiona Girlish Dream A Line Mini Skirt hjhj",
       "price": "500000",
-      "categoryId": "5",
+      "categoryId": 5,
       "color": [
         " vang",
         " do tham"
@@ -86,7 +86,7 @@
     {
       "name": "Envy Look World Comfort Double Pintuck Long Slacks",
       "price": "1000000",
-      "categoryId": "2",
+      "categoryId": 2,
       "color": [
         "xanh",
         " vang",
@@ -105,7 +105,7 @@
     {
       "name": "Envy Look All Season Skirt",
       "price": "10000000",
-      "categoryId": "2",
+      "categoryId": 2,
       "color": [
         "xanh",
         " vang"
@@ -123,7 +123,7 @@
     {
       "name": "Envy Look All Season Skirt 1",
       "price": "10000000",
-      "categoryId": "4",
+      "categoryId": 4,
       "color": [
         "xanh",
         " vang"
@@ -141,7 +141,7 @@
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks",
       "price": "1200000",
-      "categoryId": "4",
+      "categoryId": 4,
       "color": [
         "xanh",
         " vang"
@@ -159,7 +159,7 @@
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks 1",
       "price": "1200000",
-      "categoryId": "4",
+      "categoryId": 4,
       "color": [
         "xanh",
         " vang"
@@ -177,7 +177,7 @@
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks",
       "price": "1200000",
-      "categoryId": "4",
+      "categoryId": 4,
       "color": [
         "xanh",
         " vang"
@@ -196,7 +196,7 @@
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks hi",
       "price": "1300000",
-      "categoryId": "4",
+      "categoryId": 4,
       "color": [
         "xanh",
         " vang"
@@ -215,7 +215,7 @@
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks hi",
       "price": "1300000",
-      "categoryId": "5",
+      "categoryId": 5,
       "color": [
         "xanh",
         " vang"
@@ -234,7 +234,7 @@
     {
       "name": "Envy Look Wish Blouse 1",
       "price": "1300000",
-      "categoryId": "5",
+      "categoryId": 5,
       "color": [
         "xanh",
         " vang"
@@ -253,7 +253,7 @@
     {
       "name": "Envy Look Wish Blouse 1",
       "price": "1300000",
-      "categoryId": "5",
+      "categoryId": 5,
       "color": [
         "xanh",
         " vang"
@@ -272,7 +272,7 @@
     {
       "name": "Fiona Shy Tweed Twinkle Jacket Skirt Set",
       "price": "1300000",
-      "categoryId": "5",
+      "categoryId": 5,
       "color": [
         "xanh",
         " vang"
@@ -291,7 +291,7 @@
     {
       "name": "Fiona Shy Tweed Twinkle Jacket Skirt Set",
       "price": "1300000",
-      "categoryId": "3",
+      "categoryId": 3,
       "color": [
         "xanh",
         " vang"
@@ -310,7 +310,7 @@
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black",
       "price": "1300000",
-      "categoryId": "3",
+      "categoryId": 3,
       "color": [
         "xanh",
         " vang"
@@ -329,7 +329,7 @@
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black",
       "price": "1300000",
-      "categoryId": "3",
+      "categoryId": 3,
       "color": [
         "xanh",
         " vang"
@@ -348,7 +348,7 @@
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black 2",
       "price": "1300000",
-      "categoryId": "3",
+      "categoryId": 3,
       "color": [
         "xanh",
         " vang"
@@ -367,7 +367,7 @@
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black 2",
       "price": "1300000",
-      "categoryId": "3",
+      "categoryId": 3,
       "color": [
         "xanh",
         " vang"
@@ -386,7 +386,7 @@
     {
       "name": "Benito The Net Dress",
       "price": "1300000",
-      "categoryId": "3",
+      "categoryId": 3,
       "color": [
         "xanh",
         " vang"
@@ -445,6 +445,44 @@
       "gender": "0",
       "roleId": 1,
       "id": 2
+    }
+  ],
+  "news": [
+    {
+      "title": "There are many variations of passages",
+      "shortDesc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, ",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, ",
+      "author": "Nghĩa Trương",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649222945/la4g6rbgfekdfhqyjvul.jpg",
+      "createdAt": 1649222948536,
+      "id": 2
+    },
+    {
+      "title": "HANBOK IN EVERYDAY LIFE",
+      "shortDesc": "Tradition meets modern lifestyle\n",
+      "content": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, ",
+      "author": "Mr.Siro",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649230249/ithruab9ljbwna8jct9n.jpg",
+      "createdAt": 1649230291771,
+      "id": 3
+    },
+    {
+      "title": "WOMEN'S BASIC TEES",
+      "shortDesc": "And match to your style!",
+      "content": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, ",
+      "author": "Ms.Tran",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649230335/rkrbkbzqusec0khj15fj.jpg",
+      "createdAt": 1649230350372,
+      "id": 4
+    },
+    {
+      "title": "MADE FOR SENSITIVE SKIN",
+      "shortDesc": "There are many variations of passage",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,",
+      "author": "nghia",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649230438/rxmhssyzdlg96lo9ujbu.jpg",
+      "createdAt": 1649230442417,
+      "id": 5
     }
   ]
 }

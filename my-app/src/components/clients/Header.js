@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import { getCategorys } from '../../features/CategorySlice'
 import FormUser from './home/FormUser'
 
 const Header = () => {
+  const cate = useSelector((state) => state.category.value)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getCategorys())
+  }, [])
   return (
     <div>
       <header>
@@ -53,10 +60,14 @@ const Header = () => {
                 <NavLink to='/'>Trang Chủ</NavLink>
               </a></li>
               <li><a>
-                <NavLink to='/products'>Thời Trang</NavLink>
+                <NavLink to='/products'>#All</NavLink>
               </a></li>
-              <li className="active"><a>Thời Trang </a></li>
-              <li className="active"><a>Tin Tức</a></li>
+              {cate?.map((item, index) => 
+              <li><a>
+                <NavLink key={index} to={`/products/${item.id}/${item.name}`}>{item.name}</NavLink>
+              </a></li>)}
+              
+              
               <li className="active"><a>#ALBUM</a></li>
             </ul>
           </div>

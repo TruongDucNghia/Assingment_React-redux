@@ -62,12 +62,14 @@ const AddProduct = () => {
       document.querySelector('#errSize').innerHTML = ''
       const color = data.color.split(',')
       const view = 0
-      const datas = { ...data, img, color, size, createdAt, view }
+      const categoryId = Number(data.categoryId)
+      const datas = { ...data, img, categoryId, color, size, createdAt, view }
       dispatch(addProducts(datas))
       toastMess()
       setTimeout(() => {
         navigate('/admin/products')
       }, 2500)
+      // console.log(datas);
     }
   }
   return (

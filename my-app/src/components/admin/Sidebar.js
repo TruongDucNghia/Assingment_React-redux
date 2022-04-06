@@ -30,9 +30,9 @@ const Sidebar = (props) => {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" data-bs-toggle="collapse" to="/admin/new" aria-expanded="false" aria-controls="form-elements">
+                        <NavLink className="nav-link" data-bs-toggle="collapse" to="/admin/news" aria-expanded="false" aria-controls="form-elements">
                             <i className="menu-icon mdi mdi-card-text-outline" />
-                            <span className="menu-title">news</span>
+                            <span className="menu-title">News</span>
                             <i className="menu-arrow" />
                         </NavLink>
                         

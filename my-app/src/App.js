@@ -12,32 +12,42 @@ import ListProducts from './page/PageAdmin/products/listProducts';
 import UpdateProduct from './page/PageAdmin/products/UpdateProduct';
 import ProductsPage from './page/PageClient/ProductsPage';
 import ProductDetail from './page/PageClient/ProductDetail';
+import ListNews from './page/PageAdmin/news/ListNews';
+import AddNews from './page/PageAdmin/news/AddNews';
+import UpdateNew from './page/PageAdmin/news/UpdateNew';
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<WebsiteLayout/>}>
         <Route index element={<HomePage/>}/>
-        <Route path='products' element={<ProductsPage/>}/>
+        <Route path='products/:id/:slug' element={<ProductsPage/>}/>
         <Route path='products/:id/detail' element={<ProductDetail/>}/>
       </Route>
 
       <Route path='/admin' element={<AdminLayout/>}>
         <Route index element={<Navigate to="dashboard" />}/>
         <Route path="dashboard" element={<Dashboard/>} />
+
         <Route path="category">
           <Route index element={<Navigate to="list"/>}/>
           <Route path="list" element={<ListCate/>} />
           <Route path="add" element={<AddCate/>} />
           <Route path=":id/update" element={<UpdateCate/>} />
-          
         </Route>
+
         <Route path="products">
           <Route index element={<Navigate to="list"/>}/>
           <Route path="list" element={<ListProducts/>} />
           <Route path="add" element={<AddProduct/>} />
-          <Route path=":id/update" element={<UpdateProduct/>} />
-          
+          <Route path=":id/update" element={<UpdateProduct/>} />    
+        </Route>
+
+        <Route path="news">
+          <Route index element={<Navigate to="list"/>}/>
+          <Route path="list" element={<ListNews/>} />
+          <Route path="add" element={<AddNews/>} />
+          <Route path=":id/update" element={<UpdateNew/>} />    
         </Route>
       </Route>
     </Routes>

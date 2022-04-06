@@ -34,3 +34,8 @@ export const get10ProductNew = () =>{
     const url = `/products?_sort=createdAt&_order=desc&_limit=10`
     return instance.get(url)
 }
+
+export const getProductsCate = (id) =>{
+    const url = `/categorys/${id}?_embed=products`
+    return instance.get(url)
+}
