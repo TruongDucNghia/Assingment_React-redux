@@ -49,7 +49,12 @@ const Header = () => {
           </div>
           <div className="header-menu">
             <ul className="sub-nav m-0">
-              <li className="active"><a>Trang Chủ</a></li>
+              <li className="active"><a>
+                <NavLink to='/'>Trang Chủ</NavLink>
+              </a></li>
+              <li><a>
+                <NavLink to='/products'>Thời Trang</NavLink>
+              </a></li>
               <li className="active"><a>Thời Trang </a></li>
               <li className="active"><a>Tin Tức</a></li>
               <li className="active"><a>#ALBUM</a></li>

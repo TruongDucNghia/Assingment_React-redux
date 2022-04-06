@@ -10,12 +10,16 @@ import Dashboard from './page/PageAdmin/Dashboard';
 import AddProduct from './page/PageAdmin/products/AddProduct';
 import ListProducts from './page/PageAdmin/products/listProducts';
 import UpdateProduct from './page/PageAdmin/products/UpdateProduct';
+import ProductsPage from './page/PageClient/ProductsPage';
+import ProductDetail from './page/PageClient/ProductDetail';
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<WebsiteLayout/>}>
         <Route index element={<HomePage/>}/>
+        <Route path='products' element={<ProductsPage/>}/>
+        <Route path='products/:id/detail' element={<ProductDetail/>}/>
       </Route>
 
       <Route path='/admin' element={<AdminLayout/>}>

@@ -17,7 +17,6 @@ const FormSignin = (props) => {
             
         }
     }
-    console.log(user);
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)} name="form-login" className="p-5" id="login_user">

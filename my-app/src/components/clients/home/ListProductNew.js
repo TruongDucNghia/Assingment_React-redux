@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import Slider from 'react-slick'
 import { get10ProductNew } from '../../../api/products'
 
@@ -46,7 +47,6 @@ const ListProductNew = () => {
         }
         getProduct()
     }, [])
-    console.log(products);
     return (
         <div className="product-news">
             <div className="product-news__title mb-3">
@@ -65,7 +65,7 @@ const ListProductNew = () => {
             <div className="slick__slider">
                 <Slider {...settings} className="pro-news-slider">
                     {products?.map(item => 
-                    <a key={item.id} href="#" className="pro-news-item">
+                    <NavLink key={item.id} to={`/products/${item.id}/detail`} className="pro-news-item">
                         <img src={item.img} />
                         <div className>
                             <div className="pro-name bg-white pt-2 text-center">
@@ -75,7 +75,7 @@ const ListProductNew = () => {
                                 <span>{item.description.slice(0, 20)}</span>
                             </div>
                         </div>
-                    </a>)}
+                    </NavLink>)}
                     
                     
                 </Slider>
