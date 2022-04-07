@@ -16,6 +16,8 @@ import ListNews from './page/PageAdmin/news/ListNews';
 import AddNews from './page/PageAdmin/news/AddNews';
 import UpdateNew from './page/PageAdmin/news/UpdateNew';
 import AllProducts from './page/PageClient/AllProducts';
+import NewsPage from './page/PageClient/NewsPage';
+import NewsDetail from './page/PageClient/NewsDetail';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path='products/:id/:slug' element={<ProductsPage/>}/>
         <Route path='products/all' element={<AllProducts/>}/>
         <Route path='products/:id/:cate/detail' element={<ProductDetail/>}/>
+        <Route path='news' element={<NewsPage/>}/>
+        <Route path='news/:id/detail' element={<NewsDetail/>}/>
       </Route>
 
       <Route path='/admin' element={<AdminLayout/>}>

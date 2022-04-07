@@ -35,6 +35,11 @@ export const get10ProductNew = () =>{
     return instance.get(url)
 }
 
+export const get10ProductView = () =>{
+    const url = `/products?_sort=view&_order=desc&_limit=10`
+    return instance.get(url)
+}
+
 export const getProductsCate = (id) =>{
     const url = `/categorys/${id}?_embed=products`
     return instance.get(url)

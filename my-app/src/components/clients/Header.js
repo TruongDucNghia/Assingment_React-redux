@@ -66,6 +66,9 @@ const Header = () => {
               <li><a>
                 <NavLink key={index} to={`/products/${item.id}/${item.name}`}>{item.name}</NavLink>
               </a></li>)}
+              <li><a>
+                <NavLink to='/news'>Tin Tức</NavLink>
+              </a></li>
               
               
               <li className="active"><a>#ALBUM</a></li>

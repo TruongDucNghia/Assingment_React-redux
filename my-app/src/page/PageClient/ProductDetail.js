@@ -1,9 +1,46 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { getProductDetail, updateProduct } from '../../api/products'
+import { getProductsToCate } from '../../features/ProductSlice'
+import Slider from 'react-slick'
 
 const ProductDetail = () => {
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    }
     useEffect(() => {
         const list = document.querySelectorAll('.content__detail__info')
         list.forEach((item) => {
@@ -15,13 +52,14 @@ const ProductDetail = () => {
 
     }, [])
     const { id, cate } = useParams()
-    console.log(cate);
     const dispatch = useDispatch()
+    const productCate = useSelector(state => state.product.value)
     const [product, setProduct] = useState({})
     const [color, setColor] = useState([])
     const [size, setSize] = useState([])
     useEffect(() => {
         const getProduct = async () => {
+            dispatch(getProductsToCate(cate))
             const { data } = await getProductDetail(id)
             setProduct(data)
             setColor(data.color)
@@ -32,7 +70,7 @@ const ProductDetail = () => {
     }, [])
 
     const increaseView = async (view) => {
-        await updateProduct({id, view: view + 1 })
+        await updateProduct({ id, view: view + 1 })
     }
     return (
         <div>
@@ -220,55 +258,19 @@ const ProductDetail = () => {
                     </div>
                     <div className="box__slider__ct">
                         <p className="vclll">Bạn cũng có thể thích</p>
-                        <div className="slider-album__content slick-initialized slick-slider slick-dotted"><button className="slick-prev slick-arrow" aria-label="Previous" type="button" aria-disabled="false" style={{}}>Previous</button><div className="slick-list draggable"><div className="slick-track" style={{ opacity: 1, width: 1542, transform: 'translate3d(-257px, 0px, 0px)', transition: 'transform 500ms ease 0s' }}><div className="slick-slide" data-slick-index={0} aria-hidden="true" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" tabIndex={-1} style={{ width: 242 }}><div><div className="image-item" style={{ width: '100%', display: 'inline-block' }}>
-                            <a href="#" tabIndex={-1}>
-                                <div className="item__boxImg">
-                                    <img src="./img/product1.jpg" />
+                        <Slider {...settings} className='slider-album__content'>
+                            {productCate?.products?.map((item, index) => 
+                                <div key={index} className="image-item">
+                                    <a href="#">
+                                        <div className="item__boxImg">
+                                            <img src={item?.img} alt />
+                                        </div>
+                                    </a>
+                                    <p>{item?.name}</p>
+                                    <span><b>{Number(item.price).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</b></span>
                                 </div>
-                            </a>
-                            <p>Envy Look Spoon Fur Fleeced Sweatshirt&gt;</p>
-                            <span><b>2.000.000 VND</b></span>
-                        </div></div></div><div className="slick-slide slick-current slick-active" data-slick-index={1} aria-hidden="false" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style={{ width: 242 }}><div><div className="image-item" style={{ width: '100%', display: 'inline-block' }}>
-                            <a href="#" tabIndex={0}>
-                                <div className="item__boxImg">
-                                    <img src="./img/product1.jpg" />
-                                </div>
-                            </a>
-                            <p>Envy Look Spoon Fur Fleeced Sweatshirt&gt;</p>
-                            <span><b>2.000.000 VND</b></span>
-                        </div></div></div><div className="slick-slide slick-active" data-slick-index={2} aria-hidden="false" role="tabpanel" id="slick-slide02" style={{ width: 242 }}><div><div className="image-item" style={{ width: '100%', display: 'inline-block' }}>
-                            <a href="#" tabIndex={0}>
-                                <div className="item__boxImg">
-                                    <img src="./img/product1.jpg" />
-                                </div>
-                            </a>
-                            <p>Envy Look Spoon Fur Fleeced Sweatshirt&gt;</p>
-                            <span><b>2.000.000 VND</b></span>
-                        </div></div></div><div className="slick-slide slick-active" data-slick-index={3} aria-hidden="false" role="tabpanel" id="slick-slide03" style={{ width: 242 }}><div><div className="image-item" style={{ width: '100%', display: 'inline-block' }}>
-                            <a href="#" tabIndex={0}>
-                                <div className="item__boxImg">
-                                    <img src="./img/product1.jpg" />
-                                </div>
-                            </a>
-                            <p>Envy Look Spoon Fur Fleeced Sweatshirt&gt;</p>
-                            <span><b>2.000.000 VND</b></span>
-                        </div></div></div><div className="slick-slide slick-active" data-slick-index={4} aria-hidden="false" role="tabpanel" id="slick-slide04" style={{ width: 242 }}><div><div className="image-item" style={{ width: '100%', display: 'inline-block' }}>
-                            <a href="#" tabIndex={0}>
-                                <div className="item__boxImg">
-                                    <img src="./img/product1.jpg" />
-                                </div>
-                            </a>
-                            <p>Envy Look Spoon Fur Fleeced Sweatshirt&gt;</p>
-                            <span><b>2.000.000 VND</b></span>
-                        </div></div></div><div className="slick-slide slick-active" data-slick-index={5} aria-hidden="false" role="tabpanel" id="slick-slide05" style={{ width: 242 }}><div><div className="image-item" style={{ width: '100%', display: 'inline-block' }}>
-                            <a href="#" tabIndex={0}>
-                                <div className="item__boxImg">
-                                    <img src="./img/product1.jpg" />
-                                </div>
-                            </a>
-                            <p>Envy Look Spoon Fur Fleeced Sweatshirt&gt;</p>
-                            <span><b>2.000.000 VND</b></span>
-                        </div></div></div></div></div><button className="slick-next slick-arrow slick-disabled" aria-label="Next" type="button" style={{}} aria-disabled="true">Next</button><ul className="slick-dots" style={{}} role="tablist"><li className role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 2" tabIndex={-1}>1</button></li><li role="presentation" className="slick-active"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 2" tabIndex={0} aria-selected="true">2</button></li></ul></div>
+                            )}
+                        </Slider>
                     </div>
                     <div className="sp-title">
                         <p className="vclll">Hình ảnh chi tiết</p>

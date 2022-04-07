@@ -117,7 +117,7 @@
         "XL"
       ],
       "createdAt": 1649167112542,
-      "view": 1,
+      "view": 3,
       "id": 6
     },
     {
@@ -171,7 +171,7 @@
         "XL"
       ],
       "createdAt": 1649169166222,
-      "view": 2,
+      "view": 3,
       "id": 9
     },
     {
@@ -190,7 +190,7 @@
         "S"
       ],
       "createdAt": 1649167195894,
-      "view": 0,
+      "view": 5,
       "id": 10
     },
     {
@@ -304,7 +304,7 @@
         "S"
       ],
       "createdAt": 1649167299854,
-      "view": 0,
+      "view": 7,
       "id": 16
     },
     {
@@ -361,7 +361,7 @@
         "S"
       ],
       "createdAt": 1649167338015,
-      "view": 0,
+      "view": 1,
       "id": 19
     },
     {
@@ -399,7 +399,7 @@
         "S"
       ],
       "createdAt": 1649167371375,
-      "view": 2,
+      "view": 4,
       "id": 21
     },
     {
@@ -420,7 +420,7 @@
         "XL"
       ],
       "createdAt": 1649262066679,
-      "view": 5,
+      "view": 26,
       "id": 22
     }
   ],
@@ -504,6 +504,15 @@
       "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649230438/rxmhssyzdlg96lo9ujbu.jpg",
       "createdAt": 1649230442417,
       "id": 5
+    },
+    {
+      "title": "EVERY STYLE YOU CAN IMAGINE",
+      "shortDesc": "S/S Knitwear Collection\n",
+      "content": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, ",
+      "author": "Mr. Truong Nghia",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649342413/vtum64go9cdmwbxjmb66.jpg",
+      "createdAt": 1649342415928,
+      "id": 6
     }
   ]
 }

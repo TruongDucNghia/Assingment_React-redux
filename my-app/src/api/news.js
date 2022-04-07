@@ -29,3 +29,8 @@ export const get3NewsApi = () =>{
     const url = `/news?_sort=createdAt&_order=desc&_limit=3`
     return instance.get(url)
 }
+
+export const get4NewsApi = () =>{
+    const url = `/news?_sort=createdAt&_order=desc&_limit=4`
+    return instance.get(url)
+}
