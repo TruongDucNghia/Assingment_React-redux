@@ -3,6 +3,14 @@ import {NavLink} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { deleteProducts, getProducts } from '../../../features/ProductSlice'
 import { ToastContainer, toast } from 'react-toastify';
+
+import 'jquery/dist/jquery.min.js';
+//Datatable Modules
+import "datatables.net-dt/js/dataTables.dataTables"
+import "datatables.net-dt/css/jquery.dataTables.min.css"
+import $ from 'jquery'; 
+
+
 const ListProducts = () => {
     const dispatch = useDispatch()
     useEffect(() =>{
@@ -17,6 +25,12 @@ const ListProducts = () => {
             toastMess()
         }
     }
+    //initialize datatable
+    useEffect(() =>{
+        $(document).ready(function () {
+            $('#duma').DataTable();
+        });
+    }, [])
   return (
     <div>
         <div>
@@ -28,10 +42,10 @@ const ListProducts = () => {
             <button type="button" className="btn btn-success">Add products</button>
             </NavLink>
                            
-            <table className="table">
+            <table id='duma' className="table">
                 <thead>
-                    <tr className="">
-                        <th>#</th>
+                    <tr role="row">
+                        <th >#</th>
                         <th>Name</th>
                         <th>Image</th>
                         <th>Price</th>
@@ -44,7 +58,7 @@ const ListProducts = () => {
                 </thead>
                 <tbody>
                     {products?.map((item, index) => 
-                    <tr>
+                    <tr role="odd" key={index}>
                         <td>{index + 1}</td>
                         <td>{item.name.slice(0, 20)}</td>
                         <td>

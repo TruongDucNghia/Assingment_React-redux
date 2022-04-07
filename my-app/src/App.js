@@ -15,6 +15,7 @@ import ProductDetail from './page/PageClient/ProductDetail';
 import ListNews from './page/PageAdmin/news/ListNews';
 import AddNews from './page/PageAdmin/news/AddNews';
 import UpdateNew from './page/PageAdmin/news/UpdateNew';
+import AllProducts from './page/PageClient/AllProducts';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/' element={<WebsiteLayout/>}>
         <Route index element={<HomePage/>}/>
         <Route path='products/:id/:slug' element={<ProductsPage/>}/>
+        <Route path='products/all' element={<AllProducts/>}/>
         <Route path='products/:id/detail' element={<ProductDetail/>}/>
       </Route>
 

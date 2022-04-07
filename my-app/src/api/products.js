@@ -27,7 +27,7 @@ export const getProductDetail = (id) =>{
 
 export const updateProduct = (data) =>{
     const url = `/products/${data.id}`
-    return instance.put(url, data)
+    return instance.patch(url, data)
 }
 
 export const get10ProductNew = () =>{

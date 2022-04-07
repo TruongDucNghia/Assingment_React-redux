@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink, useParams } from 'react-router-dom'
-import { getProductsToCate } from '../../features/ProductSlice'
+import { NavLink } from 'react-router-dom'
+import { getProduct } from '../../api/products'
 
-const ProductsPage = () => {
-    const {id} = useParams()
-    const dispatch = useDispatch()
+const AllProducts = () => {
+    const [product, setProduct] = useState([])
     useEffect(() =>{
-        if(id == 'all'){
-            console.log('all');
-        }else{
-            dispatch(getProductsToCate(id))
+        const getAll = async () =>{
+            const {data} = await getProduct()
+            setProduct(data)
         }
-    }, [id]);
-    const products = useSelector((state) => state.product.value)
+        getAll()
+    }, []);
+    // console.log(product);
     return (
         <div>
             <main className="body__product">
                 <div className="product__header">
                     <div className="proH__title">
-                        <h3>{products?.name}</h3>
+                        <h3>Tất cả sản phẩm</h3>
                     </div>
                     <div className="proH__text1">
-                        <p>({products?.products?.length} sản phẩm)</p>
+                        <p>({product?.length} sản phẩm)</p>
                     </div>
                     <div className="proH__text2">
                         <p>Bạn đang tìm kiếm những sản phẩm hoàn hảo phù hợp với mọi thứ hay chiếc váy dễ thương nhất lấy cảm
@@ -67,8 +66,8 @@ const ProductsPage = () => {
                     {/* <div class="" id="test"></div> */}
                     <div className="proC__show">
                         <div className="proC__allItem">
-                            {products?.products?.map(item => 
-                            <form action="productFavoriteClient" method="GET" className="proC__item">
+                            {product?.map(item => 
+                            <form className="proC__item">
                                 <div className="proC__item__img">
                                     <NavLink to={`/products/${item?.id}/detail`}>
                                         <img src={item?.img} alt width="100%" />
@@ -115,4 +114,4 @@ const ProductsPage = () => {
     )
 }
 
-export default ProductsPage
+export default AllProducts

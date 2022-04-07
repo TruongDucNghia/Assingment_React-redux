@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { getProductDetail } from '../../api/products'
+import { getProductDetail, updateProduct } from '../../api/products'
 
 const ProductDetail = () => {
+    // const [view, setView] = useState()
     useEffect(() =>{
         const list = document.querySelectorAll('.content__detail__info')
         list.forEach((item) =>{
@@ -14,6 +16,7 @@ const ProductDetail = () => {
         
     }, [])
     const { id } = useParams()
+    const dispatch = useDispatch()
     const [product, setProduct] = useState({})
     const [color, setColor] = useState([])
     const [size, setSize] = useState([])
@@ -23,12 +26,22 @@ const ProductDetail = () => {
             setProduct(data)
             setColor(data.color)
             setSize(data.size)
+            // setView(data.view)
         }
         getProduct()
     }, [])
+    // useEffect(() =>{
+    //     const updateView = async () =>{
+    //         await updateProduct({id, view: view++})
+    //     }
+    //     updateView()
+    // }, [view])
+    
+    
     return (
         <div>
             <main className="body__details">
+                <input type='hidden' id='view' defaultValue={product?.view}/>
                 <div className="product-page pt-4">
                     <div className="subnav-trail">
                         <a href="productClient?action=list">Mặt hàng</a>

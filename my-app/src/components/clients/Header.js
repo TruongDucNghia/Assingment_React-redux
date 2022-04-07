@@ -60,7 +60,7 @@ const Header = () => {
                 <NavLink to='/'>Trang Chủ</NavLink>
               </a></li>
               <li><a>
-                <NavLink to='/products'>#All</NavLink>
+                <NavLink to='/products/all'>#All</NavLink>
               </a></li>
               {cate?.map((item, index) => 
               <li><a>
