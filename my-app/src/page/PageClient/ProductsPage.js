@@ -70,7 +70,7 @@ const ProductsPage = () => {
                             {products?.products?.map(item => 
                             <form action="productFavoriteClient" method="GET" className="proC__item">
                                 <div className="proC__item__img">
-                                    <NavLink to={`/products/${item?.id}/detail`}>
+                                    <NavLink to={`/products/${item?.id}/${item.categoryId}/detail`}>
                                         <img src={item?.img} alt width="100%" />
                                     </NavLink>
                                 </div>

@@ -42,7 +42,7 @@
         "S"
       ],
       "createdAt": 1649166526073,
-      "view": 0,
+      "view": 1,
       "id": 1
     },
     {
@@ -99,7 +99,7 @@
         "XL"
       ],
       "createdAt": 1649166967053,
-      "view": 0,
+      "view": 1,
       "id": 5
     },
     {
@@ -117,7 +117,7 @@
         "XL"
       ],
       "createdAt": 1649167112542,
-      "view": 0,
+      "view": 1,
       "id": 6
     },
     {
@@ -171,7 +171,7 @@
         "XL"
       ],
       "createdAt": 1649169166222,
-      "view": 0,
+      "view": 2,
       "id": 9
     },
     {
@@ -323,7 +323,7 @@
         "S"
       ],
       "createdAt": 1649167310181,
-      "view": 0,
+      "view": 1,
       "id": 17
     },
     {
@@ -399,7 +399,7 @@
         "S"
       ],
       "createdAt": 1649167371375,
-      "view": 0,
+      "view": 2,
       "id": 21
     },
     {
@@ -414,13 +414,13 @@
         " hong",
         " nau"
       ],
-      "description": "duma",
+      "description": "blabla",
       "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649262027/smjkgxsolnohihcogydc.jpg",
       "size": [
         "XL"
       ],
       "createdAt": 1649262066679,
-      "view": 3,
+      "view": 5,
       "id": 22
     }
   ],

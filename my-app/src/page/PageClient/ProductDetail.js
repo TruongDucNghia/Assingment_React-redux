@@ -4,44 +4,40 @@ import { useParams } from 'react-router-dom'
 import { getProductDetail, updateProduct } from '../../api/products'
 
 const ProductDetail = () => {
-    // const [view, setView] = useState()
-    useEffect(() =>{
+    useEffect(() => {
         const list = document.querySelectorAll('.content__detail__info')
-        list.forEach((item) =>{
+        list.forEach((item) => {
             // item.children[1].classList.remove('show__detail')
-            item.addEventListener('click', () =>{
+            item.addEventListener('click', () => {
                 item.children[1].classList.toggle('show__detail')
             })
         })
-        
+
     }, [])
-    const { id } = useParams()
+    const { id, cate } = useParams()
+    console.log(cate);
     const dispatch = useDispatch()
     const [product, setProduct] = useState({})
     const [color, setColor] = useState([])
     const [size, setSize] = useState([])
-    useEffect(() =>{
-        const getProduct = async () =>{
-            const {data} = await getProductDetail(id)
+    useEffect(() => {
+        const getProduct = async () => {
+            const { data } = await getProductDetail(id)
             setProduct(data)
             setColor(data.color)
             setSize(data.size)
-            // setView(data.view)
+            increaseView(data.view)
         }
         getProduct()
     }, [])
-    // useEffect(() =>{
-    //     const updateView = async () =>{
-    //         await updateProduct({id, view: view++})
-    //     }
-    //     updateView()
-    // }, [view])
-    
-    
+
+    const increaseView = async (view) => {
+        await updateProduct({id, view: view + 1 })
+    }
     return (
         <div>
             <main className="body__details">
-                <input type='hidden' id='view' defaultValue={product?.view}/>
+                <input type='hidden' id='view' defaultValue={product?.view} />
                 <div className="product-page pt-4">
                     <div className="subnav-trail">
                         <a href="productClient?action=list">Mặt hàng</a>
@@ -79,10 +75,10 @@ const ProductDetail = () => {
                                 </div>
                                 <div className="pd-price ">
                                     <div id="price-observer">
-                                        <div className="default-price"><span className="currency lc" /><span className="number">{Number(product.price).toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}</span></div>
+                                        <div className="default-price"><span className="currency lc" /><span className="number">{Number(product.price).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span></div>
                                         <div className="price__sale">
                                             {/* <span className="price__sale--fist">{product.price}</span> */}
-                                            
+
                                         </div>
                                     </div>
                                     <div className="pd-sku">
@@ -298,7 +294,7 @@ const ProductDetail = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div></main>
         </div>
 

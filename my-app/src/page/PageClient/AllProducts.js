@@ -12,7 +12,6 @@ const AllProducts = () => {
         }
         getAll()
     }, []);
-    // console.log(product);
     return (
         <div>
             <main className="body__product">
@@ -69,7 +68,7 @@ const AllProducts = () => {
                             {product?.map(item => 
                             <form className="proC__item">
                                 <div className="proC__item__img">
-                                    <NavLink to={`/products/${item?.id}/detail`}>
+                                    <NavLink to={`/products/${item?.id}/${item.categoryId}/detail`}>
                                         <img src={item?.img} alt width="100%" />
                                     </NavLink>
                                 </div>

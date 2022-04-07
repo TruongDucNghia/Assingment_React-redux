@@ -65,7 +65,7 @@ const ListProductNew = () => {
             <div className="slick__slider">
                 <Slider {...settings} className="pro-news-slider">
                     {products?.map(item => 
-                    <NavLink key={item.id} to={`/products/${item.id}/detail`} className="pro-news-item">
+                    <NavLink key={item.id} to={`/products/${item.id}/${item.categoryId}/detail`} className="pro-news-item">
                         <img src={item.img} />
                         <div className>
                             <div className="pro-name bg-white pt-2 text-center">
