@@ -17,10 +17,20 @@ export const signins = createAsyncThunk(
     }
 )
 
+export const logout = createAsyncThunk(
+    'user/logout',
+    () =>{
+        localStorage.removeItem('user')
+    }
+)
+
+
+const initUser = JSON.parse(localStorage.getItem('user'))
+
 const UserSlice = createSlice({
     name: 'user',
     initialState: {
-        value: []
+        value: initUser ?? []
     },
     extraReducers: (builder) =>{
         builder.addCase(signups.fulfilled, (state, actions) =>{
@@ -29,9 +39,10 @@ const UserSlice = createSlice({
         builder.addCase(signins.fulfilled, (state, actions) =>{
             state.value = actions.payload
         })
-        builder.addCase(signins.rejected, (state, actions) =>{
-            state.value = 'looix vclllll'
+        builder.addCase(logout.fulfilled, (state, actions) =>{
+            state.value = []
         })
+        
     }
 })
 

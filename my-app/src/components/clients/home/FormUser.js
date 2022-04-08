@@ -1,14 +1,14 @@
 import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { NavLink} from 'react-router-dom'
-import { signups } from '../../../features/UserSlice'
+import { logout, signups } from '../../../features/UserSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import FormSignin from './FormSignin'
 
 
 const FormUser = () => {
-  const isUser = localStorage.getItem('user')
+  const isUser = useSelector(state => state.user.value)
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
   const toastMess = () => toast.success('Chúc mừng bạn đăng ký thành công !')
   const dispatch = useDispatch()
@@ -19,10 +19,13 @@ const FormUser = () => {
     reset()
 
   }
+  const numberFavorite = useSelector(state => state.favorite.value)
   function handlerLogout(e){
     e.preventDefault()
-    // localStorage.removeItem('user')
-    console.log('logout');
+    const action = window.confirm('Bạn chắc có muốn đăng xuất chứ ?')
+    if(action){
+      dispatch(logout())
+    }
     
   }
   return (
@@ -31,7 +34,7 @@ const FormUser = () => {
       <div className="user-options">
         <div className="search-rp" />
         {/* khi đã đăng nhập thành công */}
-        {isUser ? 
+        {isUser.length !== 0 ? 
         <div className="profile pt-4 pb-4">
           <span className="title-pop-user">Hồ sơ<i className="fa fa-angle-down ml-2" aria-hidden="true" /></span>
           <div className="pop-profile">
@@ -133,7 +136,7 @@ const FormUser = () => {
             <i className="fa fa-heart" aria-hidden="true" />
           </NavLink>
           <div className="notifi">
-            0
+            {numberFavorite?.length}
           </div>
         </div>
         <div className="box-cart pt-4 pb-4">
