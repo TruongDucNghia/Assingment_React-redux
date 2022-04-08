@@ -20,6 +20,8 @@ import NewsPage from './page/PageClient/NewsPage';
 import NewsDetail from './page/PageClient/NewsDetail';
 import FavoritePage from './page/PageClient/FavoritePage';
 import Profile from './page/PageClient/Profile';
+import CheckRole from './middlewares/CheckRole';
+import CheckUser from './middlewares/CheckUser';
 
 function App() {
   return (
@@ -32,10 +34,10 @@ function App() {
         <Route path='news' element={<NewsPage/>}/>
         <Route path='news/:id/detail' element={<NewsDetail/>}/>
         <Route path='favorites' element={<FavoritePage/>}/>
-        <Route path='profile' element={<Profile/>}/>
+        <Route path='profile' element={<CheckUser><Profile/></CheckUser>}/>
       </Route>
 
-      <Route path='/admin' element={<AdminLayout/>}>
+      <Route path='/admin' element={<CheckRole><AdminLayout/></CheckRole>}>
         <Route index element={<Navigate to="dashboard" />}/>
         <Route path="dashboard" element={<Dashboard/>} />
 
