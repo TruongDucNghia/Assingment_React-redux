@@ -5,3 +5,7 @@ export const addCartApi = (data) =>{
     return instance.post(url, data)
 }
 
+export const deleteCartApi = (id) =>{
+    const url = `/cart/${id}`
+    return instance.delete(url)
+}
