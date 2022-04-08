@@ -22,6 +22,7 @@ import FavoritePage from './page/PageClient/FavoritePage';
 import Profile from './page/PageClient/Profile';
 import CheckRole from './middlewares/CheckRole';
 import CheckUser from './middlewares/CheckUser';
+import CartPage from './page/PageClient/CartPage';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path='news/:id/detail' element={<NewsDetail/>}/>
         <Route path='favorites' element={<FavoritePage/>}/>
         <Route path='profile' element={<CheckUser><Profile/></CheckUser>}/>
+        <Route path='cart' element={<CheckUser><CartPage/></CheckUser>}/>
       </Route>
 
       <Route path='/admin' element={<CheckRole><AdminLayout/></CheckRole>}>

@@ -144,9 +144,9 @@ const FormUser = () => {
           </div>
         </div>
         <div className="box-cart pt-4 pb-4">
-          <a href="cartClient" className="cart">
+          <NavLink to="cart" className="cart">
             <i className="fa fa-shopping-bag" aria-hidden="true" />
-          </a>
+          </NavLink>
           <div className="notifi">
             0
           </div>

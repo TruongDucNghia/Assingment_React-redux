@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getProductDetail, updateProduct } from '../../api/products'
 import { getProductsToCate } from '../../features/ProductSlice'
 import Slider from 'react-slick'
+import { useForm } from 'react-hook-form'
+import { toast, ToastContainer } from 'react-toastify'
+import { addCarts } from '../../features/CartSlice'
 
 const ProductDetail = () => {
     const settings = {
@@ -57,6 +60,11 @@ const ProductDetail = () => {
     const [product, setProduct] = useState({})
     const [color, setColor] = useState([])
     const [size, setSize] = useState([])
+    const [C, setC] = useState('')
+    const [S, setS] = useState('')
+    const [quantity, setQuantity] = useState(1)
+    const isUser = useSelector(state => state.user.value)
+    const navigate = useNavigate()
     useEffect(() => {
         const getProduct = async () => {
             dispatch(getProductsToCate(cate))
@@ -72,8 +80,28 @@ const ProductDetail = () => {
     const increaseView = async (view) => {
         await updateProduct({ id, view: view + 1 })
     }
+    const messErr = () => toast.error('Vui lòng chọn đầy đủ thuộc tính sản phẩm !')
+    const messUser = () => toast.error('Bạn phải đăng nhập trước khi thêm giỏ hàng !')
+    const messSucc = () => toast.success('Thêm sản phẩm vào giỏ hàng thành công !')
+    const handleAddCart = (data, e) =>{
+        e.preventDefault()
+        if(isUser.length === 0){
+            messUser()
+        }else{
+            if(C === '' || S === '' || quantity == 0){
+                messErr()
+            }else{
+                const datas = {...data, price: +data.price, size: [S], color: [C], quantity: +quantity, userId: isUser.id}
+                dispatch(addCarts(datas))
+                messSucc()
+                navigate('/cart')
+                // console.log(datas);
+            }
+        }
+    }
     return (
         <div>
+            <ToastContainer autoClose={2000}/>
             <main className="body__details">
                 <input type='hidden' id='view' defaultValue={product?.view} />
                 <div className="product-page pt-4">
@@ -105,8 +133,8 @@ const ProductDetail = () => {
                         </div>
                         <div className="pd-info" id="pd-info">
                             {/* chứa thông tin chi tiết sp */}
-                            <form className="pd__right" action="cartClient" method="POST" id="form-add-bag">
-                                <input type="hidden" id="pro_id" name="id" defaultValue="<?= $data['pros']['id'] ?>" />
+                            <form className="pd__right">
+                                
                                 <div className="pd-info-head">
                                     <div className="pd-brand-sub"><span className="pd-brand-name"><a href="/mind-bridge/b/252">Brand:</a></span></div>
                                     <div className="pd-name">{product?.name}</div>
@@ -130,14 +158,16 @@ const ProductDetail = () => {
                                 </div>
                                 <div className="pd-color">
                                     <label htmlFor="color">Chọn màu sắc</label> <br />
-                                    <select name="color" id="color">
+                                    <select value={C} onChange={(e) => setC(e.target.value)} name="color" id="color">
+                                        <option selected value=''>----- Chọn màu sắc -----</option>
                                         {color.map(item => <option value={item}>{item}</option>)}
                                     </select>
                                     <div className="errC text-danger" />
                                 </div>
                                 <div className="pd-color">
                                     <div className="size">Kích cỡ</div>
-                                    <select name="size" id="size">
+                                    <select value={S} onChange={(e) => setS(e.target.value)} name="size" id="size">
+                                        <option selected value=''>----- Chọn kích cỡ -----</option>
                                         {size.map(item => <option value={item}>{item}</option>)}
                                     </select> <br />
                                     <div className="errS text-danger" />
@@ -145,7 +175,7 @@ const ProductDetail = () => {
                                 </div>
                                 <div className="pd-color">
                                     <div className="quantity">Số lượng</div>
-                                    <input type="number" className="quantity" min={1} name="quantity" style={{ marginTop: 10, padding: '5px 5px', width: 70 }} defaultValue={1} id="quantity" />
+                                    <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="quantity" min={1} name="quantity" style={{ marginTop: 10, padding: '5px 5px', width: 70 }} id="quantity" />
                                     <div className="errQ text-danger" />
                                     <div className="errQty text-danger" />
                                 </div>
@@ -154,10 +184,13 @@ const ProductDetail = () => {
                                 <div className="fav-forms-wrap">
                                     <div className="animate-button-wrap pd-buttons">
                                         <input type="hidden" id="storage" name="storage" defaultValue />
-                                        <button type="submit" id="checkout_0" className="pd-checkout animate black loader">Thêm vào giỏ hàng</button>
-                                        <span className=" btn_add_fa">
-                                            <i className="far fa-heart" />
-                                        </span>
+                                        <button onClick={(e) =>{handleAddCart({
+                                            productId: product.id,
+                                            name: product.name,
+                                            price: product.price,
+                                            img: product.img
+                                        }, e)}} type="submit" id="checkout_0" className="pd-checkout animate black loader">Thêm vào giỏ hàng</button>
+                                        
                                     </div>
                                 </div>
                                 <div className="body__content__detail">
