@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, useParams } from 'react-router-dom'
+import { addFavorite, deleteFavorite } from '../../features/FavoriteSlice'
 import { getProductsToCate } from '../../features/ProductSlice'
 
 const ProductsPage = () => {
@@ -14,6 +15,23 @@ const ProductsPage = () => {
         }
     }, [id]);
     const products = useSelector((state) => state.product.value)
+
+
+    const handleSetProduct = (id, e) =>{
+        const favoriteP = products.products.filter(item =>{
+            if(item.id === id){
+                return item
+            }
+        })
+        if(e.target.classList.contains('fas')){
+            dispatch(deleteFavorite(id))
+        }else{
+            dispatch(addFavorite(favoriteP[0]))
+        }
+        // handleAddIcon()
+    }
+    const favorite = useSelector(state => state.favorite.value)
+    
     return (
         <div>
             <main className="body__product">
@@ -67,8 +85,8 @@ const ProductsPage = () => {
                     {/* <div class="" id="test"></div> */}
                     <div className="proC__show">
                         <div className="proC__allItem">
-                            {products?.products?.map(item => 
-                            <form action="productFavoriteClient" method="GET" className="proC__item">
+                            {products?.products?.map((item, index) => 
+                            <form key={index} className="proC__item">
                                 <div className="proC__item__img">
                                     <NavLink to={`/products/${item?.id}/${item.categoryId}/detail`}>
                                         <img src={item?.img} alt width="100%" />
@@ -83,10 +101,10 @@ const ProductsPage = () => {
                                     </div>
                                    
                                 </div>
-                                <div className="proC__love">
+                                <div className="proC__love" onClick={(e) => handleSetProduct(item.id, e)}>
                                     <span className="proC__love__icon btn_add_fa">
                                         {/* // xử lí nếu sp đã tồn tại favo thì cho icon heart màu đỏ */}
-                                        <i className="far fa-heart" />
+                                        <i className={`far fa-heart ${favorite.map(fa => fa.id === item.id ? 'fas' : '').join('')}`} />
                                         
                                     </span>
                                 </div>

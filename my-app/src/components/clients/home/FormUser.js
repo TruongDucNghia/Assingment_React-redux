@@ -129,9 +129,9 @@ const FormUser = () => {
           <img src="./img/vietnam.png" />
         </a>
         <div className="box-favorite-pro pt-4 pb-4">
-          <a className="favorite-pro">
+          <NavLink to='/favorites' className="favorite-pro">
             <i className="fa fa-heart" aria-hidden="true" />
-          </a>
+          </NavLink>
           <div className="notifi">
             0
           </div>

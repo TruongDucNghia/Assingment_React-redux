@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { getProduct } from '../../api/products'
+import { addFavorite, deleteFavorite } from '../../features/FavoriteSlice'
 
 const AllProducts = () => {
     const [product, setProduct] = useState([])
+    const dispatch = useDispatch()
     useEffect(() =>{
         const getAll = async () =>{
             const {data} = await getProduct()
@@ -12,6 +14,21 @@ const AllProducts = () => {
         }
         getAll()
     }, []);
+
+    const handleSetProduct = (id, e) =>{
+        const favoriteP = product.filter(item =>{
+            if(item.id === id){
+                return item
+            }
+        })
+        if(e.target.classList.contains('fas')){
+            dispatch(deleteFavorite(id))
+        }else{
+            dispatch(addFavorite(favoriteP[0]))
+        }
+        // handleAddIcon()
+    }
+    const favorite = useSelector(state => state.favorite.value)
     return (
         <div>
             <main className="body__product">
@@ -81,10 +98,10 @@ const AllProducts = () => {
                                     </div>
                                    
                                 </div>
-                                <div className="proC__love">
+                                <div className="proC__love" onClick={(e) => handleSetProduct(item.id, e)}>
                                     <span className="proC__love__icon btn_add_fa">
                                         {/* // xử lí nếu sp đã tồn tại favo thì cho icon heart màu đỏ */}
-                                        <i className="far fa-heart" />
+                                        <i className={`far fa-heart ${favorite.map(fa => fa.id === item.id ? 'fas' : '').join('')}`} />
                                         
                                     </span>
                                 </div>

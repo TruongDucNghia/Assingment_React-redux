@@ -1574,6 +1574,11 @@ bottom: 0;
     transition: .25s ease-in-out;
     animation: dm 1s ease;
 }
+.proC__love__icon i.far.fa-heart.fas{
+    color: red;
+    transition: .25s ease-in-out;
+    animation: dm 1s ease;
+}
 .proC__love__icon i{
     cursor: pointer;
 }
