@@ -23,7 +23,7 @@
   ],
   "products": [
     {
-      "name": "Fiona Shine Ribbon Tweed Blouse Skirt Set",
+      "name": "Fiona Shine Ribbon Tweed Blouse Skirt Set 1",
       "price": "1000000",
       "categoryId": 2,
       "color": [
@@ -41,7 +41,7 @@
         "M",
         "S"
       ],
-      "createdAt": 1649166526073,
+      "createdAt": 1649425767063,
       "view": 1,
       "id": 1
     },
@@ -450,7 +450,7 @@
     {
       "email": "nghia@gmail.com",
       "password": "$2a$10$RxwbEswAyjh/Bb4FaPDCHO2ZtdW1nsJ3sao3ISprr2UhUVXoiuu9C",
-      "username": "Trương Nghĩa",
+      "username": "Trương Nghĩa uodate",
       "birthday": "2002-08-03",
       "phone": "0372559460",
       "gender": "0",
@@ -459,8 +459,8 @@
     },
     {
       "email": "admin@gmail.com",
-      "password": "$2a$10$MHYmfz/vKFUTuC8tqIWoW.cqfqC2NU.kUQB6iIfYs6vm7ZvILSr3m",
-      "username": "Admin",
+      "password": "$2a$10$9esWj..tsZuFEjHKTB94TeZjFyof5xkKfGC6U7syklY2oLc/6rOM2",
+      "username": "Admin vjp pro ",
       "birthday": "2022-04-06",
       "phone": "11111111",
       "gender": "0",

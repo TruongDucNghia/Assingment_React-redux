@@ -1,16 +1,19 @@
 import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink} from 'react-router-dom'
+import { NavLink, useNavigate} from 'react-router-dom'
 import { logout, signups } from '../../../features/UserSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import FormSignin from './FormSignin'
+
+
 
 
 const FormUser = () => {
   const isUser = useSelector(state => state.user.value)
   const { register, handleSubmit, formState: { errors }, reset } = useForm()
   const toastMess = () => toast.success('Chúc mừng bạn đăng ký thành công !')
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const onSubmitRegister =  (data) => {
     const roleId = 0
@@ -25,6 +28,7 @@ const FormUser = () => {
     const action = window.confirm('Bạn chắc có muốn đăng xuất chứ ?')
     if(action){
       dispatch(logout())
+      navigate('/')
     }
     
   }

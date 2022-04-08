@@ -3362,20 +3362,29 @@ a{
 .acc__menu__item + .acc__menu__item{ 
     margin: 0px 20px;
 }
+.acc__menu__item.active a{
+    color: #000;
+}
+.acc__menu__item a{
+    color: rgb(100, 100, 100);
+}
 .acc__line{
-    position: absolute;
+    /* position: absolute;
     left: 0;
     bottom: 30px;
     width: 0;
     height: 1.9px;
     border-radius: 15px;
     background-color: #575757;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease; */
 }
 .acc__tab__menu{
     display: none;
     transition: all 0.5s ease;
     animation: op 1.3s ease;
+}
+.acc__tab__menu.active{
+    display: block;
 }
 
 .acc__donhang{

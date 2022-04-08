@@ -4,18 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { signins } from '../../../features/UserSlice'
 const FormSignin = (props) => {
-    const {register, handleSubmit, formState:{errors}} = useForm()
+    const {register, handleSubmit, formState:{errors}, reset} = useForm()
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const user = useSelector(state => state.user.value)
     const onSubmit = (data) =>{
-        try {
-            dispatch(signins(data))
-            localStorage.setItem('user', JSON.stringify(user))
-        } catch (error) {
-            console.log(error);
-            
-        }
+        dispatch(signins(data))
+        reset()
     }
     return (
         <div>

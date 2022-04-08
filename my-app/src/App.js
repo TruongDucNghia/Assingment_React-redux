@@ -19,6 +19,7 @@ import AllProducts from './page/PageClient/AllProducts';
 import NewsPage from './page/PageClient/NewsPage';
 import NewsDetail from './page/PageClient/NewsDetail';
 import FavoritePage from './page/PageClient/FavoritePage';
+import Profile from './page/PageClient/Profile';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='news' element={<NewsPage/>}/>
         <Route path='news/:id/detail' element={<NewsDetail/>}/>
         <Route path='favorites' element={<FavoritePage/>}/>
+        <Route path='profile' element={<Profile/>}/>
       </Route>
 
       <Route path='/admin' element={<AdminLayout/>}>
