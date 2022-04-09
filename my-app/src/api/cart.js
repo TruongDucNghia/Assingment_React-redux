@@ -14,3 +14,8 @@ export const updateCartApi = (data) =>{
     const url = `/cart/${data.id}`
     return instance.patch(url, data)
 }
+
+export const getCartAllApi = () =>{
+    const url = `/cart`
+    return instance.get(url)
+}

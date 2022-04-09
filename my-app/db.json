@@ -42,7 +42,7 @@
         "S"
       ],
       "createdAt": 1649425767063,
-      "view": 8,
+      "view": 10,
       "id": 1
     },
     {
@@ -99,7 +99,7 @@
         "XL"
       ],
       "createdAt": 1649166967053,
-      "view": 85,
+      "view": 89,
       "id": 5
     },
     {
@@ -153,7 +153,7 @@
         "XL"
       ],
       "createdAt": 1649167142287,
-      "view": 9,
+      "view": 22,
       "id": 8
     },
     {
@@ -171,7 +171,7 @@
         "XL"
       ],
       "createdAt": 1649169166222,
-      "view": 57,
+      "view": 62,
       "id": 9
     },
     {
@@ -247,7 +247,7 @@
         "S"
       ],
       "createdAt": 1649167255753,
-      "view": 1,
+      "view": 2,
       "id": 13
     },
     {
@@ -304,7 +304,7 @@
         "S"
       ],
       "createdAt": 1649167299854,
-      "view": 39,
+      "view": 44,
       "id": 16
     },
     {
@@ -323,7 +323,7 @@
         "S"
       ],
       "createdAt": 1649167310181,
-      "view": 1,
+      "view": 22,
       "id": 17
     },
     {
@@ -342,7 +342,7 @@
         "S"
       ],
       "createdAt": 1649167327771,
-      "view": 1,
+      "view": 11,
       "id": 18
     },
     {
@@ -399,7 +399,7 @@
         "S"
       ],
       "createdAt": 1649167371375,
-      "view": 4,
+      "view": 9,
       "id": 21
     },
     {
@@ -420,7 +420,7 @@
         "XL"
       ],
       "createdAt": 1649262066679,
-      "view": 26,
+      "view": 27,
       "id": 22
     }
   ],
@@ -466,6 +466,16 @@
       "gender": "0",
       "roleId": 1,
       "id": 2
+    },
+    {
+      "email": "hung@gmail.com",
+      "password": "$2a$10$p.xIRnx5ziknATt.kJllvOU9.HAFSJIyhK4Fp914MJl0VVklmm7Ay",
+      "username": "hung pro",
+      "birthday": "2022-04-09",
+      "phone": "091371238",
+      "gender": "0",
+      "roleId": 0,
+      "id": 3
     }
   ],
   "news": [

@@ -1,9 +1,31 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getCartAllApi } from '../../api/cart'
+import { decreaseQty, increaseQty, removeItemInCart } from '../../features/CartSlice'
 
 const CartPage = () => {
+    const [cartUser, setCartUser] = useState([])
     const productCart = useSelector(state => state.cart.value)
-    console.log(productCart);
+    const userId = useSelector(state => state.user.value.id)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(productCart))
+        const cart = productCart.filter(item => item.userId === userId)
+        setCartUser(cart)
+    }, [productCart])
+    let totalProducts = 0
+    cartUser.forEach(item => {
+        totalProducts += item.price * item.quantity
+    })
+    const handleIncrease = (id) =>{
+        dispatch(increaseQty(id))
+    }
+    const handledecrease = (id) =>{
+        dispatch(decreaseQty(id))
+    }
+    const handleRemove = (id) =>{
+        dispatch(removeItemInCart(id))
+    }
     return (
         <div>
             <main className="body__cart">
@@ -21,42 +43,39 @@ const CartPage = () => {
                         </div>
                         <div className="cart__checkout__content">
                             <ul className="cart__items">
-                                <li className="ci__wrap">
-                                    <div className="ci__wrap__content">
-                                        <div className="cart__left">
-                                            <div className="cart__left__img">
-                                                <a href>
-                                                    <img src alt width="100%" />
-                                                </a>
-                                            </div>
-                                            <div className="cart__left__info">
-                                                <p />
-                                                <span className="db">Thường giao hàng trong 4-8 ngày làm việc</span>
-                                                <div className="cart__info__size">
-                                                    <span>Màu </span>
-                                                    <span>|</span>
-                                                    <span>Size </span>
+                                {cartUser?.map(item =>
+                                    <li className="ci__wrap">
+                                        <div className="ci__wrap__content">
+                                            <div className="cart__left">
+                                                <div className="cart__left__img">
+                                                    <a href>
+                                                        <img src={item.img} width="100%" />
+                                                    </a>
+                                                </div>
+                                                <div className="cart__left__info">
+                                                    <p>{item.name}</p>
+                                                    <span className="db">Thường giao hàng trong 4-8 ngày làm việc</span>
+                                                    <div className="cart__info__size">
+                                                        <span>Màu: {item.color.map(i => i).join('-')} </span>
+                                                        <span>|</span>
+                                                        <span>Size:  {item.size.map(i => i).join('-')}</span>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div className="cart__quanty">
+                                                <button onClick={() => handleIncrease(item.productId)} className='btnC'>+</button>
+                                                <input value={item.quantity} type="number" />
+                                                <button onClick={() => handledecrease(item.productId)} className='btnC'>-</button>
+                                            </div>
+                                            <div className="cart__price">
+                                                <span>{(item.quantity * item.price).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+                                            </div>
                                         </div>
-                                        <div className="cart__quanty">
-                                            <form action method="POST">
-                                                <input type="hidden" name="action" defaultValue="update_cart" />
-                                                <input type="hidden" name="cart_id" defaultValue />
-                                                <input type="hidden" name="pro_id" defaultValue />
-                                                <input type="number" name="quantity" min={1} step={0} defaultValue />
-                                                <button type="submit" name="btn_update_qty" className="btn btn-info"><i className="fa fa-refresh" aria-hidden="true" />
-                                                </button>
-                                            </form>
+                                        <div className="cart__remove">
+                                            <p onClick={() => handleRemove(item.productId)}  className="text-danger">Xóa</p>
                                         </div>
-                                        <div className="cart__price">
-                                            <span>đ</span>
-                                        </div>
-                                    </div>
-                                    <div className="cart__remove">
-                                        <a href="cartClient?action=del&id=<?= $item['cart_id'] ?>" className="text-danger">Xóa</a>
-                                    </div>
-                                </li>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>
@@ -70,7 +89,7 @@ const CartPage = () => {
                                     <span>Tổng phụ</span>
                                 </div>
                                 <div className="sum__price__dola">
-                                    <span>31231231đ</span>
+                                    <span>{Number(totalProducts).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
                                 </div>
                             </div>
                             <div className="cart__btn__order">
@@ -103,7 +122,7 @@ const CartPage = () => {
                             </div>
                             <div className="cart__item__PC">
                                 <div className="cart__item__price">
-                                    <p>123123123đ</p>
+                                    <p>adasdasdsa</p>
                                 </div>
                                 <div className="cart__item__color">
                                     <img src="public/images/layout/colorwheel-2.png" alt />
@@ -112,7 +131,7 @@ const CartPage = () => {
                         </div>
                     </div>
                 </div>
-                 {/* <div className="DH__content__body">
+                {/* <div className="DH__content__body">
                     <div className>
                         <h3 className style={{ color: '#FFBC7F' }}>Giỏ hàng của bạn đang rỗng!</h3>
                         <a href="productClient?action=viewListProduct" className="text-primary text-center">Mua sắm ngay</a>

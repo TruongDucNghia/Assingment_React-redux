@@ -6,6 +6,12 @@
 .show{
     display: none;
 }
+.btnC{
+    width: 27px;
+    height: 27px;
+    border: 1px solid black;
+    outline: none;
+}
 a{
 text-decoration: none !important;
 color: #555 !important;

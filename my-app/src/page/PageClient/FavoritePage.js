@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { deleteFavorite } from '../../features/FavoriteSlice'
@@ -6,25 +6,38 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const FavoritePage = () => {
     const products = useSelector(state => state.favorite.value)
+    const isUser = useSelector(state => state.user.value)
     const dispatch = useDispatch()
     const tostMess = () => toast.error('Xóa thành công sản phẩm !')
-    const handleDelete = (id) =>{
+    const handleDelete = (id) => {
         const action = window.confirm('Bạn có chắc muốn xóa chứ !')
-        if(action){
+        if (action) {
             dispatch(deleteFavorite(id))
             tostMess()
         }
     }
+    const messUser = () => toast.error('Bạn phải đăng nhập trước khi thêm giỏ hàng !')
+    const messSucc = () => toast.success('Thêm sản phẩm vào giỏ hàng thành công !')
+    useEffect(() =>{
+        const listForm = document.querySelectorAll('.like__item')
+        listForm.forEach(item =>{
+            item.addEventListener('submit', (e) =>{
+                e.preventDefault()
+                console.log(e.target[0].value);
+                console.log(e);
+            })
+        })
+    }, [])
     return (
         <div>
-            <ToastContainer  autoClose={1200}/>
+            <ToastContainer autoClose={1200} />
             <main className="body__like">
                 <div className="title__like">
-                    <h2 style={{marginBottom: '20px'}}>Các mặt hàng yêu thích của bạn!</h2>
+                    <h2 style={{ marginBottom: '20px' }}>Các mặt hàng yêu thích của bạn!</h2>
                 </div>
                 <div className="content__like">
                     <section className="like__Allitem">
-                        {products?.map(item => 
+                        {products?.map(item =>
                             <form key={item.id} className="like__item" method="POST">
                                 <div className="c">
                                     <NavLink to={`/products/${item.id}/${item.categoryId}/detail`} className="like__img">
@@ -41,21 +54,26 @@ const FavoritePage = () => {
                                     {/* case -> save session */}
                                     <div className="like__filter__color">
                                         <select className="filter__select" name="color">
-                                            {item?.color?.map(i => 
-                                            <option key={i} value={i}>{i}</option>
+                                            <option selected value=''> Chọn màu sắc </option>
+                                            {item?.color?.map(i =>
+                                                <option key={i} value={i}>{i}</option>
                                             )}
                                         </select>
                                     </div>
                                     <div className="like__filter__color">
                                         <select className="filter__select" name="size">
-                                            {item?.size?.map(i => 
-                                            <option key={i} value={i}>{i}</option>
+                                            <option selected value=''> Chọn kích cỡ </option>
+                                            {item?.size?.map(i =>
+                                                <option key={i} value={i}>{i}</option>
                                             )}
                                         </select>
                                     </div>
                                     <div className="like__filter__color">
-                                        <input type="number" name="quantity" className="filter__select" defaultValue={1} id />
+                                        <input type="number" name="quantity" className="filter__select" />
                                         <input type="hidden" name="pro_id" defaultValue={85} />
+                                        <input type="hidden" name="pro_img" defaultValue={item.img} />
+                                        <input type="hidden" name="pro_name" defaultValue={item.name} />
+                                        <input type="hidden" name="pro_price" defaultValue={item.pice} />
                                     </div>
                                 </div>
                                 <p onClick={() => handleDelete(item.id)} className="like__close">
