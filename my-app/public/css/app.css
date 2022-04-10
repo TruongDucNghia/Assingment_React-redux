@@ -3147,9 +3147,6 @@ a{
 .content__note{
     overflow: hidden;
 }
-.note__input{
-    display: none;
-}
 .vcl{
     display: block;
 }

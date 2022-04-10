@@ -94,9 +94,9 @@ const CartPage = () => {
                                 </div>
                             </div>
                             <div className="cart__btn__order">
-                                <a href="checkoutClient?action=checkout">
+                                <NavLink to="/checkOut">
                                     <button type="button">Thủ tục thanh toán</button>
-                                </a>
+                                </NavLink>
                             </div>
                             <div className="cart__bottom">
                                 <span>Tích cực mua hàng ring ngay quà lớn G63!</span> <br /> <br />
