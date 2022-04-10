@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, useParams } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import { getProductDetail, updateProduct } from '../../api/products'
 import { getProductsToCate } from '../../features/ProductSlice'
 import Slider from 'react-slick'
@@ -294,11 +294,11 @@ const ProductDetail = () => {
                         <Slider {...settings} className='slider-album__content'>
                             {productCate?.products?.map((item, index) => 
                                 <div key={index} className="image-item">
-                                    <a href="#">
+                                    <NavLink to={`/products/${item?.id}/${item.categoryId}/detail`}>
                                         <div className="item__boxImg">
                                             <img src={item?.img} alt />
                                         </div>
-                                    </a>
+                                    </NavLink>
                                     <p>{item?.name}</p>
                                     <span><b>{Number(item.price).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</b></span>
                                 </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { getCategorys } from '../../features/CategorySlice'
@@ -6,6 +6,7 @@ import FormUser from './home/FormUser'
 
 const Header = () => {
   const cate = useSelector((state) => state.category.value)
+  
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getCategorys())

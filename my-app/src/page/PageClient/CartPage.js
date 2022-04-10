@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCartAllApi } from '../../api/cart'
+import { NavLink } from 'react-router-dom'
 import { decreaseQty, increaseQty, removeItemInCart } from '../../features/CartSlice'
 
 const CartPage = () => {
@@ -31,9 +31,10 @@ const CartPage = () => {
             <main className="body__cart">
                 <div className="body__cart__title">
                     <h3>Giỏ hàng mua sắm</h3>
-                    <div className="bg-success p-2 text-light" />
-                    <div className="bg-success p-2 text-light" />
+                    
                 </div>
+                {cartUser.length !== 0 
+                ? 
                 <div className="cart__content">
                     <div className="cart__checkout">
                         <div className="cart__checkout__title">
@@ -98,7 +99,7 @@ const CartPage = () => {
                                 </a>
                             </div>
                             <div className="cart__bottom">
-                                <span>Bạn kiếm được 3,92 đô la phần thưởng cho đơn đặt hàng này!</span> <br /> <br />
+                                <span>Tích cực mua hàng ring ngay quà lớn G63!</span> <br /> <br />
                                 <span>Phần thưởng sẽ được thêm vào tài khoản của bạn sau khi đơn hàng đã được vận chuyển đầy
                                     đủ. Số
                                     tiền thưởng có thể thay đổi.</span>
@@ -106,40 +107,17 @@ const CartPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="body__cart__title" id="title2">
-                    <h3>Đề xuất cho bạn</h3>
-                </div>
-                <div className="slick__slider">
-                    <div className="cart__allItem slide-news">
-                        <div className="cart__item">
-                            <div className="cart__item__img">
-                                <a href="productDetail?action=viewDetail&id=<?= $item['id'] ?>">
-                                    <img src="./public/images/products/<?= $item['avatar'] ?>" alt width="100%" />
-                                </a>
-                            </div>
-                            <div className="cart__item__Name">
-                                <p>aksdal</p>
-                            </div>
-                            <div className="cart__item__PC">
-                                <div className="cart__item__price">
-                                    <p>adasdasdsa</p>
-                                </div>
-                                <div className="cart__item__color">
-                                    <img src="public/images/layout/colorwheel-2.png" alt />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* <div className="DH__content__body">
+                :
+                <div className="DH__content__body">
                     <div className>
                         <h3 className style={{ color: '#FFBC7F' }}>Giỏ hàng của bạn đang rỗng!</h3>
-                        <a href="productClient?action=viewListProduct" className="text-primary text-center">Mua sắm ngay</a>
+                        <NavLink to="/products/all" className="text-primary text-center">Mua sắm ngay</NavLink>
                     </div>
                     <div className>
-                        <img src="./public/images/layout/empty-orders.jpg" alt />
+                        <img src="img/empty-orders.jpg" alt />
                     </div>
-                </div>  */}
+                </div> 
+                }
             </main>
 
         </div>

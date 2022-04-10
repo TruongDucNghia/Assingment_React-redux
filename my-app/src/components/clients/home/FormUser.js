@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, useNavigate} from 'react-router-dom'
@@ -32,6 +32,12 @@ const FormUser = () => {
     }
     
   }
+  const [cartUser, setCartUser] = useState([])
+  const productCart = useSelector(state => state.cart.value)
+  useEffect(() => {
+    const cart = productCart.filter(item => item.userId === isUser.id)
+    setCartUser(cart)
+}, [productCart])
   return (
     <div>
       <ToastContainer autoClose={2000}/>
@@ -148,7 +154,7 @@ const FormUser = () => {
             <i className="fa fa-shopping-bag" aria-hidden="true" />
           </NavLink>
           <div className="notifi">
-            0
+            {cartUser?.length}
           </div>
           {/* start popup-cart */}
           {/* hover hiển thị thông in giỏ hàng */}

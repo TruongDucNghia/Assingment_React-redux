@@ -10,6 +10,7 @@ const FormSignin = (props) => {
     const onSubmit = (data) =>{
         dispatch(signins(data))
         reset()
+        navigate('/')
     }
     return (
         <div>
