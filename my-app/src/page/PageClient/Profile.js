@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { logout, updateUser } from '../../features/UserSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import OrderPage from '../../components/clients/home/OrderPage';
 
 const Profile = () => {
     const { register, handleSubmit, formState:{errors}, reset} = useForm()
@@ -160,21 +161,7 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className="acc__tab__menu">
-                        <div className="acc__menu__content">
-                            <div className="acc__donhang">
-                                <div className="acc__DH__title">
-                                    <p>Lịch sử đơn hàng</p>
-                                </div>
-                                <div className="acc__DH__content">
-                                    <div className="DH__content__title">
-                                        <p>Không tìm thấy đơn hàng</p>
-                                    </div>
-                                    <div className="DH__content__body">
-                                        <img src="img/empty-orders.jpg" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <OrderPage/>
                     </div>
                 </div>
             </main>

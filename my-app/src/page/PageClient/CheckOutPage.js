@@ -1,11 +1,53 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify'
+import { clearCart } from '../../features/CartSlice'
+import { addOrder } from '../../features/OrderSlice'
 
 const CheckOutPage = () => {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const isUser = useSelector(state => state.user.value)
+    const createdAt = new Date().getTime()
+    const [cartUser, setCartUser] = useState([])
+    const productCart = useSelector(state => state.cart.value)
+    useEffect(() => {
+        const cart = productCart.filter(item => item.userId === isUser.id)
+        setCartUser(cart)
+    }, [productCart])
+    let totalProducts = 0
+    cartUser.forEach(item => {
+        totalProducts += item.price * item.quantity
+    })
+    const messErr = () => toast.error('Vui lòng chọn đầy đủ thuộc tính sản phẩm !')
+    const messSucc = () => toast.success('Thêm sản phẩm vào giỏ hàng thành công !')
+    const handleCheckOut = (e) =>{
+        e.preventDefault()
+        console.log(e);
+        const name = e.target[0].value
+        const address = e.target[1].value
+        const phone = e.target[2].value
+        const note = e.target[4].value
+        const status = 0
+        if(name === '' || address === '' || phone === ''){
+            messErr()
+        }else{
+            const data = {order: cartUser, userId: isUser.id, name, address, phone, note, status, totalProducts, createdAt}
+            dispatch(addOrder(data))
+            dispatch(clearCart(isUser.id))
+            messSucc()
+            setTimeout(() =>{
+                navigate('/profile')
+            }, 1200)
+        }
+        
+    }
     return (
         <div>
             <main className="body__order">
-                <form id="checkout" className="body__order__content" method="POST">
+                <ToastContainer autoClose={1200}/>
+                <form onSubmit={handleCheckOut} className="body__order__content">
                     <div className="body__order__left">
                         <div className="order__left__title">
                             <h3>1. Địa chỉ giao hàng</h3>
@@ -23,15 +65,15 @@ const CheckOutPage = () => {
                             </div>
                             <div className="address">
                                 <label htmlFor>Họ tên</label>
-                                <input name="fullname" type="text" />
+                                <input name="fullname" defaultValue={isUser.username} type="text" />
                             </div>
                             <div className="address">
                                 <label htmlFor>Địa chỉ cụ thể</label>
-                                <textarea name="address_spec" id cols={30} rows={3} className style={{ border: '1px solid #d7d7d7', borderRadius: 5 }}  />
+                                <textarea name="address_spec" id cols={30} rows={3} className style={{ border: '1px solid #d7d7d7', borderRadius: 5 }} />
                             </div>
                             <div className="address">
                                 <label htmlFor>Số điện thoại</label>
-                                <input name="phone" type="text" />
+                                <input name="phone" defaultValue={isUser.phone} type="text" />
                             </div>
                         </div>
                         {/* pro odder */}
@@ -40,26 +82,28 @@ const CheckOutPage = () => {
                                 <h3>2. Mặt hàng thanh toán</h3>
                             </div>
                             <div className="order__bottom__content">
-                                <div className="order__bottom__item">
-                                    <img src="public/images/products/6a3303333db533225eff5745b555e96413eb6e83.jpg" alt width="70px" />
-                                    <div className="order__info">
-                                        <div className="order__name">
-                                            <p>Envy Look Spoon Fur Fleeced Sweatshirt</p>
-                                        </div>
-                                        <div className="order__text">
-                                            <p>ĐEN</p>
-                                            <p>|</p>
-                                            <p>Size M</p>
-                                            <p>|</p>
-                                            <p>Qty 1</p>
-                                            <p>|</p>
-                                            <p>10000 vnd</p>
+                                {cartUser?.map(item =>
+                                    <div className="order__bottom__item">
+                                        <img src={item.img} width="70px" />
+                                        <div className="order__info">
+                                            <div className="order__name">
+                                                <p>{item.name}</p>
+                                            </div>
+                                            <div className="order__text">
+                                                <p>{item.color.map(i => i).join('-')}</p>
+                                                <p>|</p>
+                                                <p>{item.size.map(i => i).join('-')}</p>
+                                                <p>|</p>
+                                                <p>Qty: {item.quantity}</p>
+                                                <p>|</p>
+                                                <p>{(item.quantity * item.price).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                )}
                                 {/* tổng giá (check nếu nhập đúng mã vc thì đưa ra giá new)*/}
                                 {/* tổng tiền */}
-                                <input type="hidden" name="total_price" id="total_price" defaultValue={30033} />
+
                                 <div className="order__chage">
                                     <NavLink to="/cart" className="text-primary">Chỉnh sửa giỏ hàng</NavLink>
                                 </div>
@@ -82,46 +126,46 @@ const CheckOutPage = () => {
                                 {/* <label for="vocher" class="error" style="display: none; margin-left: 20px !important;"></label> */}
                                 <div className="content__subtotal">
                                     <span>Tổng giá:</span>
-                                    <p>1 tỵ</p>
+                                    <p>{Number(totalProducts).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</p>
                                 </div>
                                 <div id="shiping" className="content__subtotal">
-                                <span>Phí chuyển hàng:</span>
-                                <p>30,000đ</p>
-                            </div>
-                            <div className="contnet__all">
-                                <span><b>Số tiền phải thanh tóan</b>:
-                                    2 tỵ</span>
-                                <p />
-                            </div>
-                            <div className="content__note">
-                                <div className="note">
-                                    <p><i className="fas fa-plus" /> Thêm ghi chú vào đơn hàng này</p>
+                                    <span>Phí chuyển hàng:</span>
+                                    <p>30,000đ</p>
                                 </div>
-                                <div className="note__input">
-                                    <input type="text" name="note" placeholder="Lưu ý của khách hàng" />
+                                <div className="contnet__all">
+                                    <span>Số tiền phải thanh toán:
+                                    </span>
+                                    <b>{Number(totalProducts + 30000).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</b>
                                 </div>
-                            </div>
-                            <div className="content__ok">
-                                <div className="pretty p-default">
-                                    <input type="checkbox" name="agree" defaultChecked />
-                                    <div className="state p-info">
-                                        <label>Tôi chấp nhận các Điều khoản và Chính sách Bảo mật.</label>
+                                <div className="content__note">
+                                    <div className="note">
+                                        <p><i className="fas fa-plus" /> Thêm ghi chú vào đơn hàng này</p>
+                                    </div>
+                                    <div className="note__input">
+                                        <input type="text" name="note" placeholder="Lưu ý của khách hàng" />
                                     </div>
                                 </div>
-                                <span style={{ fontSize: 12 }} className="text-primary">Điều khoản và Chính sách Bảo mật.</span>
-                                
-                            </div>
-                            <div className="content__submitAll">
-                                <button type="submit" name="btn_order">Đặt hàng</button>
+                                <div className="content__ok">
+                                    <div className="pretty p-default">
+                                        <input type="checkbox" name="agree" defaultChecked />
+                                        <div className="state p-info">
+                                            <label>Tôi chấp nhận các Điều khoản và Chính sách Bảo mật.</label>
+                                        </div>
+                                    </div>
+                                    <span style={{ fontSize: 12 }} className="text-primary">Điều khoản và Chính sách Bảo mật.</span>
+
+                                </div>
+                                <div className="content__submitAll">
+                                    <button type="submit" name="btn_order">Đặt hàng</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </main>
+                </form>
+            </main>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default CheckOutPage

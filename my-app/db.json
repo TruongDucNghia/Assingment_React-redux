@@ -42,7 +42,7 @@
         "S"
       ],
       "createdAt": 1649425767063,
-      "view": 10,
+      "view": 12,
       "id": 1
     },
     {
@@ -62,7 +62,7 @@
         "M"
       ],
       "createdAt": 1649166481093,
-      "view": 15,
+      "view": 16,
       "id": 2
     },
     {
@@ -117,7 +117,7 @@
         "XL"
       ],
       "createdAt": 1649167112542,
-      "view": 33,
+      "view": 34,
       "id": 6
     },
     {
@@ -171,7 +171,7 @@
         "XL"
       ],
       "createdAt": 1649169166222,
-      "view": 62,
+      "view": 63,
       "id": 9
     },
     {
@@ -266,7 +266,7 @@
         "S"
       ],
       "createdAt": 1649167266108,
-      "view": 0,
+      "view": 1,
       "id": 14
     },
     {
@@ -470,7 +470,7 @@
     {
       "email": "hung@gmail.com",
       "password": "$2a$10$p.xIRnx5ziknATt.kJllvOU9.HAFSJIyhK4Fp914MJl0VVklmm7Ay",
-      "username": "hung pro",
+      "username": "Trương Hưng",
       "birthday": "2022-04-09",
       "phone": "091371238",
       "gender": "0",
@@ -525,5 +525,88 @@
       "id": 6
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "order": [
+        {
+          "productId": 1,
+          "name": "Fiona Shine Ribbon Tweed Blouse Skirt Set 1",
+          "price": 1000000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649085387/mbkcqhc5of8qdtcksyuk.jpg",
+          "size": [
+            "4"
+          ],
+          "color": [
+            "xanh"
+          ],
+          "quantity": 1,
+          "userId": 3
+        },
+        {
+          "productId": 14,
+          "name": "Envy Look Wish Blouse 1",
+          "price": 1300000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167267/q4fkz326yqsw2euxq4p5.jpg",
+          "size": [
+            "XXL"
+          ],
+          "color": [
+            "xanh"
+          ],
+          "quantity": 10,
+          "userId": 3
+        },
+        {
+          "productId": 6,
+          "name": "Envy Look All Season Skirt",
+          "price": 10000000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167102/ara6q9pmihip6oylkhih.jpg",
+          "color": [
+            "xanh"
+          ],
+          "size": [
+            "XXL"
+          ],
+          "quantity": 10,
+          "userId": 3
+        }
+      ],
+      "userId": 3,
+      "name": "hung pro",
+      "address": "việt nam",
+      "phone": "091371238",
+      "note": "lẹ giùm",
+      "status": 0,
+      "totalProducts": 114000000,
+      "createdAt": 1649691768800,
+      "id": 1
+    },
+    {
+      "order": [
+        {
+          "productId": 2,
+          "name": "Envy Look World Comfort Double Pintuck Long Slacks",
+          "price": 1200000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649087287/dddv62akj4am7310qszf.jpg",
+          "size": [
+            "XL"
+          ],
+          "color": [
+            "xanh"
+          ],
+          "quantity": 1,
+          "userId": 3
+        }
+      ],
+      "userId": 3,
+      "name": "hung pro",
+      "address": "phú thọ",
+      "phone": "091371238",
+      "note": "lẹ lẹ",
+      "status": 0,
+      "totalProducts": 1200000,
+      "createdAt": 1649692774689,
+      "id": 2
+    }
+  ]
 }
