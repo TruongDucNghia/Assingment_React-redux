@@ -47,61 +47,16 @@ const Sidebar = (props) => {
                         
                     </li>
 
-
-
-
-                    
-                    
                     <li className="nav-item">
-                        <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                            <i className="menu-icon mdi mdi-chart-line" />
-                            <span className="menu-title">Charts</span>
+                        <NavLink className="nav-link" data-bs-toggle="collapse" to="/admin/users" aria-expanded="false" aria-controls="form-elements">
+                            <i className="menu-icon fa fa-user-circle-o" />
+                            <span className="menu-title">Users</span>
                             <i className="menu-arrow" />
-                        </a>
-                        <div className="collapse" id="charts">
-                            <ul className="nav flex-column sub-menu">
-                                <li className="nav-item"> <a className="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
-                            </ul>
-                        </div>
+                        </NavLink>
+                        
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-                            <i className="menu-icon mdi mdi-table" />
-                            <span className="menu-title">Tables</span>
-                            <i className="menu-arrow" />
-                        </a>
-                        <div className="collapse" id="tables">
-                            <ul className="nav flex-column sub-menu">
-                                <li className="nav-item"> <a className="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                            <i className="menu-icon mdi mdi-layers-outline" />
-                            <span className="menu-title">Icons</span>
-                            <i className="menu-arrow" />
-                        </a>
-                        <div className="collapse" id="icons">
-                            <ul className="nav flex-column sub-menu">
-                                <li className="nav-item"> <a className="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item nav-category">pages</li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                            <i className="menu-icon mdi mdi-account-circle-outline" />
-                            <span className="menu-title">User Pages</span>
-                            <i className="menu-arrow" />
-                        </a>
-                        <div className="collapse" id="auth">
-                            <ul className="nav flex-column sub-menu">
-                                <li className="nav-item"> <a className="nav-link" href="pages/samples/login.html"> Login </a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    
+                
+ 
                 </ul>
             </nav>
         </div>

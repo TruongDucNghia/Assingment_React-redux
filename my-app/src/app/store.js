@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import AccountSlice from '../features/AccountSlice';
 import CartSlice from '../features/CartSlice';
 import CategorySlice from '../features/CategorySlice';
 import FavoriteSlice from '../features/FavoriteSlice';
@@ -14,6 +15,7 @@ export const store = configureStore({
     news: NewsSlice,
     favorite: FavoriteSlice,
     cart: CartSlice,
-    order: OrderSlice
+    order: OrderSlice,
+    account: AccountSlice
   },
 });

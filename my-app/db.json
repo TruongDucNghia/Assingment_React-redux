@@ -475,7 +475,7 @@
       "birthday": "2002-08-03",
       "phone": "0372559460",
       "gender": "0",
-      "roleId": 1,
+      "roleId": 0,
       "id": 1
     },
     {
@@ -485,7 +485,7 @@
       "birthday": "2022-04-06",
       "phone": "11111111",
       "gender": "0",
-      "roleId": 1,
+      "roleId": 0,
       "id": 2
     },
     {
@@ -495,7 +495,7 @@
       "birthday": "2022-04-09",
       "phone": "091371238",
       "gender": "0",
-      "roleId": 0,
+      "roleId": 1,
       "id": 3
     }
   ],
