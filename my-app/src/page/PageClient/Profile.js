@@ -73,7 +73,7 @@ const Profile = () => {
                                 <p>Đơn hàng</p>
                             </div>
                             <div className="acc__title__text mt-3">
-                                <p>Chào mừng bạn trở lại Trần Thị Thanh Huê</p>
+                                <h3>Chào mừng bạn trở lại {user.username}</h3>
                             </div>
                         </div>
                         <div className="body__acc__menu">

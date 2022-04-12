@@ -42,7 +42,7 @@
         "S"
       ],
       "createdAt": 1649425767063,
-      "view": 12,
+      "view": 13,
       "id": 1
     },
     {
@@ -471,7 +471,7 @@
     {
       "email": "nghia@gmail.com",
       "password": "$2a$10$RxwbEswAyjh/Bb4FaPDCHO2ZtdW1nsJ3sao3ISprr2UhUVXoiuu9C",
-      "username": "Trương Nghĩa uodate",
+      "username": "Trương Nghĩa ",
       "birthday": "2002-08-03",
       "phone": "0372559460",
       "gender": "0",

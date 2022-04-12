@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { getCategorys } from '../../features/CategorySlice'
 import FormUser from './home/FormUser'
 
 const Header = () => {
   const cate = useSelector((state) => state.category.value)
-  
+  const {register, handleSubmit, reset} = useForm()
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getCategorys())
   }, [])
-  const handleSearch = (e) =>{
-    e.preventDefault()
-    console.log(e);
+  const handleSearch = (data) =>{
+    reset()
+    navigate(`/search/${data.cate}/${data.text}`)
+    // console.log(data);
 
   }
   return (
@@ -42,12 +45,15 @@ const Header = () => {
               </NavLink>
             </div>
             <div className="search">
-              <form onSubmit={(e) => handleSearch(e.target[1].value)} action="productClient" className="form-search" method="GET">
+              <form onSubmit={handleSubmit(handleSearch)}  className="form-search">
                 <div className="pop-input">
-                  <select name="filter-cate" className="filter-cate">
+                  <select {...register('cate')} className="filter-cate">
                     <option value="all">Tất cả</option>
+                    {cate?.map(item => 
+                      <option value={item.id}>{item.name}</option>
+                    )}
                   </select>
-                  <input type="search" name="keyword" placeholder="Tìm kiếm" required />
+                  <input {...register('text')} type="search" placeholder="Tìm kiếm" required />
                 </div>
                 <button type="submit">
                   <i className="fa fa-search" aria-hidden="true" />

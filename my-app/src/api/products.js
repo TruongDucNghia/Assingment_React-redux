@@ -49,3 +49,13 @@ export const filterPriceProduct = (min, max) =>{
     const url = `/products?price_gte=${min}&price_lte=${max}`
     return instance.get(url)
 }
+
+export const filterSearchProduct = (cate, text) =>{
+    if(cate == 'all'){
+        const url = `/products/?name_like=${text}`
+        return instance.get(url)
+    }else{
+        const url = `/products/?categoryId=${cate}&name_like=${text}`
+        return instance.get(url)
+    }
+}
