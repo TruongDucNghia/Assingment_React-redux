@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import { addOrderApi, deleteOrderApi, getAllOrderApi } from '../api/order'
+import { addOrderApi, getAllOrderApi, updateOrderApi } from '../api/order'
 
 
 export const addOrder = createAsyncThunk(
@@ -18,10 +18,11 @@ export const  getAllOrder = createAsyncThunk(
     }
 )
 
-export const deleteOrder = createAsyncThunk(
-    'oder/deleteOrder',
-    async (id) =>{
-        const {data} = await deleteOrderApi(id)
+
+export const updateOrder = createAsyncThunk(
+    'order/updateOrder',
+    async (order) =>{
+        const {data} = await updateOrderApi(order)
         return data
     }
 )
@@ -38,8 +39,8 @@ const OrderSlice = createSlice({
        builder.addCase(getAllOrder.fulfilled, (state, actions) =>{
            state.value = actions.payload
        })
-       builder.addCase(deleteOrder.fulfilled, (state, actions) =>{
-           state.value = state.value.filter(item => item.id !== actions.meta.arg)
+       builder.addCase(updateOrder.fulfilled, (state, actions) =>{
+           state.value = state.value.map(item => item.id === actions.payload.id ? actions.payload : item)
        })
     }
 })

@@ -11,6 +11,11 @@ const Header = () => {
   useEffect(() => {
     dispatch(getCategorys())
   }, [])
+  const handleSearch = (e) =>{
+    e.preventDefault()
+    console.log(e);
+
+  }
   return (
     <div>
       <header>
@@ -37,14 +42,10 @@ const Header = () => {
               </NavLink>
             </div>
             <div className="search">
-              <form action="productClient" className="form-search" method="GET">
+              <form onSubmit={(e) => handleSearch(e.target[1].value)} action="productClient" className="form-search" method="GET">
                 <div className="pop-input">
                   <select name="filter-cate" className="filter-cate">
                     <option value="all">Tất cả</option>
-                    <option >Thời Trang Nam</option>
-                    <option >Thời Trang Nữ</option>
-                    <option >Đồ thể thao</option>
-                    <option >Trẻ em</option>
                   </select>
                   <input type="search" name="keyword" placeholder="Tìm kiếm" required />
                 </div>

@@ -38,6 +38,15 @@ const Sidebar = (props) => {
                         
                     </li>
 
+                    <li className="nav-item">
+                        <NavLink className="nav-link" data-bs-toggle="collapse" to="/admin/order" aria-expanded="false" aria-controls="form-elements">
+                            <i className="menu-icon mdi mdi-chart-line" />
+                            <span className="menu-title">Order</span>
+                            <i className="menu-arrow" />
+                        </NavLink>
+                        
+                    </li>
+
 
 
 

@@ -49,6 +49,7 @@ const FormUser = () => {
           <span className="title-pop-user">Hồ sơ<i className="fa fa-angle-down ml-2" aria-hidden="true" /></span>
           <div className="pop-profile">
             <NavLink to="/profile">Bảng điều khiển</NavLink>
+            {isUser.roleId === 1 ? <NavLink to="/admin">Admin</NavLink> : ''}
             <a href='' onClick={handlerLogout}>Đăng xuất</a>
           </div>
         </div>

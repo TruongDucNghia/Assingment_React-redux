@@ -51,7 +51,7 @@ const OrderPage = () => {
                                                 : item.status === 1 ?
                                                 <div className="badge bg-success">Giao hàng thành công</div>
                                                 :
-                                                <div className="badge badge-danger">Đã hủy đơn</div>
+                                                <div className="badge badge-danger text-dark">Đã hủy đơn</div>
                                                 }
                                             </td>
                                             {/* <td>

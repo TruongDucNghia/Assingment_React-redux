@@ -15,7 +15,7 @@ export const updateOrderApi = (data) =>{
     return instance.patch(url, data)
 }
 
-export const deleteOrderApi = (id) =>{
+export const getOrderDetail = (id) =>{
     const url = `/orders/${id}`
-    return instance.delete(url)
+    return instance.get(url)
 }

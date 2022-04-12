@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { getProduct } from '../../api/products'
 import { addFavorite, deleteFavorite } from '../../features/FavoriteSlice'
+import { getProducts } from '../../features/ProductSlice'
 
 const AllProducts = () => {
-    const [product, setProduct] = useState([])
     const dispatch = useDispatch()
+    const product = useSelector(state => state.product.value)
     useEffect(() =>{
-        const getAll = async () =>{
-            const {data} = await getProduct()
-            setProduct(data)
-        }
-        getAll()
+        dispatch(getProducts())
     }, []);
+    console.log(product);
 
     const handleSetProduct = (id, e) =>{
-        const favoriteP = product.filter(item =>{
+        const favoriteP = product?.filter(item =>{
             if(item.id === id){
                 return item
             }

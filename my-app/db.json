@@ -153,7 +153,7 @@
         "XL"
       ],
       "createdAt": 1649167142287,
-      "view": 22,
+      "view": 23,
       "id": 8
     },
     {
@@ -209,7 +209,7 @@
         "S"
       ],
       "createdAt": 1649167217777,
-      "view": 0,
+      "view": 2,
       "id": 11
     },
     {
@@ -470,7 +470,7 @@
     {
       "email": "hung@gmail.com",
       "password": "$2a$10$p.xIRnx5ziknATt.kJllvOU9.HAFSJIyhK4Fp914MJl0VVklmm7Ay",
-      "username": "Trương Hưng",
+      "username": "Trương Đức Hưng",
       "birthday": "2022-04-09",
       "phone": "091371238",
       "gender": "0",
@@ -576,7 +576,7 @@
       "address": "việt nam",
       "phone": "091371238",
       "note": "lẹ giùm",
-      "status": 0,
+      "status": 1,
       "totalProducts": 114000000,
       "createdAt": 1649691768800,
       "id": 1
@@ -603,10 +603,93 @@
       "address": "phú thọ",
       "phone": "091371238",
       "note": "lẹ lẹ",
-      "status": 0,
+      "status": 2,
       "totalProducts": 1200000,
       "createdAt": 1649692774689,
       "id": 2
+    },
+    {
+      "order": [
+        {
+          "productId": 6,
+          "name": "Envy Look All Season Skirt",
+          "price": 10000000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167102/ara6q9pmihip6oylkhih.jpg",
+          "color": [
+            "xanh"
+          ],
+          "size": [
+            "XL"
+          ],
+          "quantity": 7,
+          "userId": 1
+        }
+      ],
+      "userId": 1,
+      "name": "Trương Nghĩa uodate",
+      "address": "phú tho",
+      "phone": "0372559460",
+      "note": "",
+      "status": 2,
+      "totalProducts": 70000000,
+      "createdAt": 1649729938089,
+      "id": 3
+    },
+    {
+      "order": [
+        {
+          "productId": 8,
+          "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks",
+          "price": 1200000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167135/it1l7hwuaczohpxcmvgl.jpg",
+          "size": [
+            "XL"
+          ],
+          "color": [
+            "xanh"
+          ],
+          "quantity": 1,
+          "userId": 1
+        }
+      ],
+      "userId": 1,
+      "name": "Trương Nghĩa uodate",
+      "address": "alo alo",
+      "phone": "0372559460",
+      "note": "",
+      "status": 1,
+      "totalProducts": 1200000,
+      "createdAt": 1649735489783,
+      "id": 4
+    },
+    {
+      "order": [
+        {
+          "productId": 11,
+          "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks hi",
+          "price": 1300000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167218/lxlrhhbstiufs8q1xdgz.jpg",
+          "size": [
+            "XXL",
+            "S"
+          ],
+          "color": [
+            "xanh",
+            " vang"
+          ],
+          "quantity": 2,
+          "userId": 1
+        }
+      ],
+      "userId": 1,
+      "name": "Trương Nghĩa uodate",
+      "address": "phú thọ",
+      "phone": "0372559460",
+      "note": "nhanh dùm",
+      "status": 1,
+      "totalProducts": 2600000,
+      "createdAt": 1649737146180,
+      "id": 5
     }
   ]
 }

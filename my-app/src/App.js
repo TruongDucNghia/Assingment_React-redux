@@ -24,6 +24,8 @@ import CheckRole from './middlewares/CheckRole';
 import CheckUser from './middlewares/CheckUser';
 import CartPage from './page/PageClient/CartPage';
 import CheckOutPage from './page/PageClient/CheckOutPage';
+import ListOrder from './page/PageAdmin/order/listOrder';
+import DetailOrder from './page/PageAdmin/order/DetailOrder';
 
 function App() {
   return (
@@ -64,6 +66,12 @@ function App() {
           <Route path="list" element={<ListNews/>} />
           <Route path="add" element={<AddNews/>} />
           <Route path=":id/update" element={<UpdateNew/>} />    
+        </Route>
+
+        <Route path="order">
+          <Route index element={<Navigate to="list"/>}/>
+          <Route path="list" element={<ListOrder/>} />
+          <Route path=":id/detail" element={<DetailOrder/>} />    
         </Route>
       </Route>
     </Routes>

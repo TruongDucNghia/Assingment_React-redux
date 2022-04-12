@@ -7,14 +7,10 @@ import { getProductsToCate } from '../../features/ProductSlice'
 const ProductsPage = () => {
     const {id} = useParams()
     const dispatch = useDispatch()
-    useEffect(() =>{
-        if(id == 'all'){
-            console.log('all');
-        }else{
-            dispatch(getProductsToCate(id))
-        }
-    }, [id]);
     const products = useSelector((state) => state.product.value)
+    useEffect(() =>{
+        dispatch(getProductsToCate(id))
+    }, [id]);
 
 
     const handleSetProduct = (id, e) =>{
