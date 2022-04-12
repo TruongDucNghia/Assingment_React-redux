@@ -63,7 +63,7 @@ const AddProduct = () => {
       const color = data.color.split(',')
       const view = 0
       const categoryId = Number(data.categoryId)
-      const datas = { ...data, img, categoryId, color, size, createdAt, view }
+      const datas = { ...data, price: +data.price, img, categoryId, color, size, createdAt, view }
       dispatch(addProducts(datas))
       toastMess()
       setTimeout(() => {

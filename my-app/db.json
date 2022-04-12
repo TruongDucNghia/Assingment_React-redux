@@ -2,29 +2,29 @@
   "categorys": [
     {
       "name": "Thời trang nữ cá tính",
-      "img": "https://cdn-images.kooding.com/bannerItem/desktop/726/32d2d959ad315632720f23b6fb8dd6c1f2bbd66d.jpeg",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649752730/u1ssb7qp1hd3wep7uoct.jpg",
       "id": 2
     },
     {
       "name": "Thời trang Unisex",
-      "img": "https://cdn-images.kooding.com/bannerItem/mobile/753/75bd6ff35d43a5f2b3b0fcef99035e097c24c20f.jpg",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649752747/avelxhc0aymofrupa4ma.jpg",
       "id": 3
     },
     {
-      "name": "Thời trang nam trẻ trung update",
-      "img": "https://cdn-images.kooding.com/bannerItem/desktop/713/83c9810f52893ae2f7075ef7dafb7d58f4acd523.jpeg",
+      "name": "Thời trang nam trẻ trung ",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649752769/rrvbqidv1lvwhacwp7vx.jpg",
       "id": 4
     },
     {
       "name": "sản phẩm thời thượng",
-      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649060903/c7ddqy2m3c00u0t1hwh2.jpg",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649752796/ythpaefbaompqxmp563h.jpg",
       "id": 5
     }
   ],
   "products": [
     {
       "name": "Fiona Shine Ribbon Tweed Blouse Skirt Set 1",
-      "price": "1000000",
+      "price": 1000000,
       "categoryId": 2,
       "color": [
         "xanh",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Envy Look World Comfort Double Pintuck Long Slacks",
-      "price": "1200000",
+      "price": 1200000,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -67,7 +67,7 @@
     },
     {
       "name": "Fiona Girlish Dream A Line Mini Skirt hjhj",
-      "price": "500000",
+      "price": 5000000,
       "categoryId": 5,
       "color": [
         " vang",
@@ -79,13 +79,13 @@
         "XL",
         "SM"
       ],
-      "createdAt": 1649166490011,
-      "view": 1,
+      "createdAt": 1649751592131,
+      "view": 2,
       "id": 4
     },
     {
       "name": "Envy Look World Comfort Double Pintuck Long Slacks",
-      "price": "1000000",
+      "price": 1000000,
       "categoryId": 2,
       "color": [
         "xanh",
@@ -104,7 +104,7 @@
     },
     {
       "name": "Envy Look All Season Skirt",
-      "price": "10000000",
+      "price": 10000000,
       "categoryId": 2,
       "color": [
         "xanh",
@@ -117,12 +117,12 @@
         "XL"
       ],
       "createdAt": 1649167112542,
-      "view": 34,
+      "view": 35,
       "id": 6
     },
     {
       "name": "Envy Look All Season Skirt 1",
-      "price": "10000000",
+      "price": 10000000,
       "categoryId": 4,
       "color": [
         "xanh",
@@ -140,7 +140,7 @@
     },
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks",
-      "price": "1200000",
+      "price": 1200000,
       "categoryId": 4,
       "color": [
         "xanh",
@@ -158,7 +158,7 @@
     },
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks 1",
-      "price": "1200000",
+      "price": 1200000,
       "categoryId": 4,
       "color": [
         "xanh",
@@ -176,7 +176,7 @@
     },
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks",
-      "price": "1200000",
+      "price": 1200000,
       "categoryId": 4,
       "color": [
         "xanh",
@@ -195,7 +195,7 @@
     },
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks hi",
-      "price": "1300000",
+      "price": 1300000,
       "categoryId": 4,
       "color": [
         "xanh",
@@ -214,7 +214,7 @@
     },
     {
       "name": "JUSTONE Anti Feeling Tight Straight Crop Slacks hi",
-      "price": "1300000",
+      "price": 1300000,
       "categoryId": 5,
       "color": [
         "xanh",
@@ -233,7 +233,7 @@
     },
     {
       "name": "Envy Look Wish Blouse 1",
-      "price": "1300000",
+      "price": 1300000,
       "categoryId": 5,
       "color": [
         "xanh",
@@ -252,7 +252,7 @@
     },
     {
       "name": "Envy Look Wish Blouse 1",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 5,
       "color": [
         "xanh",
@@ -271,7 +271,7 @@
     },
     {
       "name": "Fiona Shy Tweed Twinkle Jacket Skirt Set",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 5,
       "color": [
         "xanh",
@@ -290,7 +290,7 @@
     },
     {
       "name": "Fiona Shy Tweed Twinkle Jacket Skirt Set",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -309,7 +309,7 @@
     },
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -328,7 +328,7 @@
     },
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -347,7 +347,7 @@
     },
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black 2",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -366,7 +366,7 @@
     },
     {
       "name": "LEESLE Unisex Hanbok Chosun Pants Black 2",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -385,7 +385,7 @@
     },
     {
       "name": "Benito The Net Dress",
-      "price": "1300000",
+      "price": 130000,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -404,7 +404,7 @@
     },
     {
       "name": "products Test update",
-      "price": "123123",
+      "price": 123123,
       "categoryId": 3,
       "color": [
         "xanh",
@@ -422,6 +422,27 @@
       "createdAt": 1649262066679,
       "view": 27,
       "id": 22
+    },
+    {
+      "name": "Fiona Shine Ribbon vjp pro no 1",
+      "price": 19999999,
+      "categoryId": 3,
+      "color": [
+        "xanh",
+        " do",
+        " hong",
+        " nau"
+      ],
+      "description": "ahjhj",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649752277/uwcj69w661puorjcydde.jpg",
+      "size": [
+        "XXL",
+        "XL",
+        "M"
+      ],
+      "createdAt": 1649752404216,
+      "view": 0,
+      "id": 23
     }
   ],
   "size": [

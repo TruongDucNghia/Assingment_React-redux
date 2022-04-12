@@ -44,3 +44,8 @@ export const getProductsCate = (id) =>{
     const url = `/categorys/${id}?_embed=products`
     return instance.get(url)
 }
+
+export const filterPriceProduct = (min, max) =>{
+    const url = `/products?price_gte=${min}&price_lte=${max}`
+    return instance.get(url)
+}

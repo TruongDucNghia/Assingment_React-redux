@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux';
 import Slider from "react-slick";
 
 
@@ -8,24 +9,18 @@ const Banner = (props) => {
         autoplaySpeed: 3000
 
       };
+    const imgBanner = useSelector(state => state.category.value)
     return (
         <div>
             <Slider {...settings} className="banner">
-                <a className="banner-item">
-                    <div className="banner_imgBox">
-                        <img src="./img/banner1.jpg" width="100%" />
-                    </div>
-                </a>
-                <a className="banner-item">
-                    <div className="banner_imgBox">
-                        <img src="./img/banner2.jpg" width="100%" />
-                    </div>
-                </a>
-                <a className="banner-item">
-                    <div className="banner_imgBox">
-                        <img src="./img/banner3.jpg" width="100%" />
-                    </div>
-                </a>
+                {imgBanner.map(item =>
+                    <a className="banner-item">
+                        <div className="banner_imgBox">
+                            <img src={item.img} width="100%" />
+                        </div>
+                    </a>
+                )}
+                
             </Slider>
             <div className="category-banner">
                 <a href="#" className="box-cate">

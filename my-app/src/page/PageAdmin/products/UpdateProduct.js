@@ -78,7 +78,7 @@ const UpdateProduct = () => {
         document.querySelector('#errSize').innerHTML = ''
         const color = document.querySelector('.color').value.split(',')
 
-        const datas = {...data, img, size, color, createdAt}
+        const datas = {...data, price: +data.price, img, size, color, createdAt}
         dispatch(updateProducts(datas))
         toastMess()
         setTimeout(() =>{

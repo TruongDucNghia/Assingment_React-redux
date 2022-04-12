@@ -1,31 +1,70 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import { filterPriceProduct, getProduct } from '../../api/products'
 import { addFavorite, deleteFavorite } from '../../features/FavoriteSlice'
-import { getProducts } from '../../features/ProductSlice'
+import $ from 'jquery'
+import 'jquery-ui-dist/jquery-ui'
 
 const AllProducts = () => {
+    const [product, setProduct] = useState([])
     const dispatch = useDispatch()
-    const product = useSelector(state => state.product.value)
-    useEffect(() =>{
-        dispatch(getProducts())
+    useEffect(() => {
+        const getAll = async () => {
+            const { data } = await getProduct()
+            setProduct(data)
+        }
+        getAll()
     }, []);
-    console.log(product);
 
-    const handleSetProduct = (id, e) =>{
-        const favoriteP = product?.filter(item =>{
-            if(item.id === id){
+    const handleSetProduct = (id, e) => {
+        const favoriteP = product.filter(item => {
+            if (item.id === id) {
                 return item
             }
         })
-        if(e.target.classList.contains('fas')){
+        if (e.target.classList.contains('fas')) {
             dispatch(deleteFavorite(id))
-        }else{
+        } else {
             dispatch(addFavorite(favoriteP[0]))
         }
         // handleAddIcon()
     }
     const favorite = useSelector(state => state.favorite.value)
+
+
+
+    useEffect(() => {
+        $("#slider-range").slider({
+            range: true,
+            min: 100000,
+            max: 20000000,
+            values: [1000000, 5000000],
+            slide: function (event, ui) {
+                $("#amount").val(ui.values[0].toLocaleString('it-IT', { style: 'currency', currency: 'VND' }) + " - " + ui.values[1].toLocaleString('it-IT', { style: 'currency', currency: 'VND' }));
+                // handlerFilterPrice(ui.values[0], ui.values[1])
+            },
+            stop: function (event, ui) {
+                handlerFilterPrice(ui.values[0], ui.values[1])
+            }
+        });
+        $("#amount").val($("#slider-range").slider("values", 0).toLocaleString('it-IT', { style: 'currency', currency: 'VND' }) +
+            " - " + $("#slider-range").slider("values", 1).toLocaleString('it-IT', { style: 'currency', currency: 'VND' }));
+    }, [])
+    useEffect(() => {
+        const btn = document.querySelector('.select__price')
+        btn.addEventListener('click', () => {
+            btn.children[1].classList.toggle('none')
+        })
+    }, [])
+    const handlerFilterPrice = (min, max) =>{
+        const getAll = async () => {
+            const { data } = await filterPriceProduct(min, max)
+            setProduct(data)
+            // console.log(data);
+        }
+        getAll()
+    }
     return (
         <div>
             <main className="body__product">
@@ -64,14 +103,14 @@ const AllProducts = () => {
                                 </div>
                                 <div className="box__filter__price none">
                                     {/* khi ng dùng thay đổi value input hidden -> show khoảng giá dưới trên range */}
-                                    <input type="hidden" name="min_price" id="hidden_minimum_price" defaultValue={0} />
-                                    <input type="hidden" name="max_price" id="hidden_maximum_price" defaultValue={10000000} />
-                                    <p id="price_show">
-                                        Từ 10 nghìn đến 10 triệu                          </p>
-                                    <div className="price_range" id="price_range">
+                                    <p id="price_show">Từ 100 nghìn đến 50 triệu</p>
+                                    <div>
+                                        <input type="text" id="amount" readOnly style={{ width: 250, border: 0, color: '#f6931f', fontWeight: 'bold' }} />
+                                        <div className="mt-1" id="slider-range" />
                                     </div>
-                                    {/* btn filter */}
-                                    <button type="submit" className="text-center btn btn-secondary mt-2 form-control" name="btn_filter_price">Áp dụng</button>
+
+
+
                                 </div>
                             </div>
                         </form>
@@ -79,35 +118,35 @@ const AllProducts = () => {
                     {/* <div class="" id="test"></div> */}
                     <div className="proC__show">
                         <div className="proC__allItem">
-                            {product?.map(item => 
-                            <form className="proC__item">
-                                <div className="proC__item__img">
-                                    <NavLink to={`/products/${item?.id}/${item.categoryId}/detail`}>
-                                        <img src={item?.img} alt width="100%" />
-                                    </NavLink>
-                                </div>
-                                <div className="proC__item__Name">
-                                    <p>{item?.name}</p>
-                                </div>
-                                <div className="proC__item__PC">
-                                    <div className="proC__item__price">
-                                        <p>{Number(item?.price).toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}</p>
+                            {product?.map(item =>
+                                <form className="proC__item">
+                                    <div className="proC__item__img">
+                                        <NavLink to={`/products/${item?.id}/${item.categoryId}/detail`}>
+                                            <img src={item?.img} alt width="100%" />
+                                        </NavLink>
                                     </div>
-                                   
-                                </div>
-                                <div className="proC__love" onClick={(e) => handleSetProduct(item.id, e)}>
-                                    <span className="proC__love__icon btn_add_fa">
-                                        {/* // xử lí nếu sp đã tồn tại favo thì cho icon heart màu đỏ */}
-                                        <i className={`far fa-heart ${favorite.map(fa => fa.id === item.id ? 'fas' : '').join('')}`} />
-                                        
-                                    </span>
-                                </div>
-                                {/* <div className="proC__sale">
+                                    <div className="proC__item__Name">
+                                        <p>{item?.name}</p>
+                                    </div>
+                                    <div className="proC__item__PC">
+                                        <div className="proC__item__price">
+                                            <p>{Number(item?.price).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</p>
+                                        </div>
+
+                                    </div>
+                                    <div className="proC__love" onClick={(e) => handleSetProduct(item.id, e)}>
+                                        <span className="proC__love__icon btn_add_fa">
+                                            {/* // xử lí nếu sp đã tồn tại favo thì cho icon heart màu đỏ */}
+                                            <i className={`far fa-heart ${favorite.map(fa => fa.id === item.id ? 'fas' : '').join('')}`} />
+
+                                        </span>
+                                    </div>
+                                    {/* <div className="proC__sale">
                                     <p className="item__sale">-1%</p>
                                 </div> */}
-                            </form>)}
-                            
-                            
+                                </form>)}
+
+
                         </div>
                         {/* end copy */}
                         <div className="proC__fist2">
