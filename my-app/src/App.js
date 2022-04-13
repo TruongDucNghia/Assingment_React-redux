@@ -28,6 +28,7 @@ import ListOrder from './page/PageAdmin/order/listOrder';
 import DetailOrder from './page/PageAdmin/order/DetailOrder';
 import Search from './page/PageClient/Search';
 import ListUser from './page/PageAdmin/users/ListUser';
+import NotFound from './page/PageClient/NotFound';
 
 function App() {
   return (
@@ -83,6 +84,7 @@ function App() {
         </Route>
 
       </Route>
+      <Route path='*' element={<NotFound/>}/>
     </Routes>
   );
 }
