@@ -110,6 +110,12 @@ const ListProductView = () => {
                     <p>Chúng tôi mỹ phẩm Hàn Quốc , trang điểm , và chăm sóc da sản phẩm cho phép bạn đặt khuôn mặt tốt nhất của bạn về phía trước. Các thương hiệu như SNP , Ariul , RiRe , Evercell by Chaum , XYZ và MILLION RED là nhà sản xuất công thức cải tiến trong trang điểm và chăm sóc da sử dụng những gì tốt nhất trong bí quyết làm đẹp của Hàn Quốc. Ở đây, bạn có thể mua sắm mặt nạ tấm mặt , chất tẩy rửa , toner , huyết thanh , kem lên mặt , Hàn Quốc phong cách sắc thái màu môi , đệm hiệp ước, và mọi thứ khác bạn cần để có được vẻ ngoài trang điểm tự nhiên, hoàn thành quy trình chăm sóc da 10 bước , duyệt theo loại da của bạn hoặc điều trị các vấn đề về da của bạn .</p>
                     <p>Hãy đến để tìm ra nơi cuộc sống của bạn đưa bạn đến tại KOODING! Vui lòng duyệt qua trang web của chúng tôi và xem các phong cách thời trang Hàn Quốc mới nhất và tuyệt vời nhất từ ​​cửa hàng thời trang trực tuyến yêu thích mới của bạn. Với khả năng phục vụ hơn 100 quốc gia, chúng tôi đảm bảo bạn sẽ có trải nghiệm mua sắm dễ dàng.</p>        </div>
             </div>
+            <div className="press-bar">
+                <img src="img/soompi.png" />
+                <img src="img/buzzfeed.png" />
+                <img src="img/klog.png" />
+                <img src="img/chinabrands.png" />
+            </div>
         </div>
     )
 }

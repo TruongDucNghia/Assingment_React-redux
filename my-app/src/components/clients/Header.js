@@ -77,9 +77,12 @@ const Header = () => {
               <li><a>
                 <NavLink to='/news'>Tin Tức</NavLink>
               </a></li>
+              <li><a>
+                <NavLink to='/album'>#ALBUM</NavLink>
+              </a></li>
               
               
-              <li className="active"><a>#ALBUM</a></li>
+              
             </ul>
           </div>
         </div>

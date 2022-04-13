@@ -29,6 +29,7 @@ import DetailOrder from './page/PageAdmin/order/DetailOrder';
 import Search from './page/PageClient/Search';
 import ListUser from './page/PageAdmin/users/ListUser';
 import NotFound from './page/PageClient/NotFound';
+import AlbumPage from './page/PageClient/AlbumPage';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path='profile' element={<CheckUser><Profile/></CheckUser>}/>
         <Route path='cart' element={<CheckUser><CartPage/></CheckUser>}/>
         <Route path='checkOut' element={<CheckUser><CheckOutPage/></CheckUser>}/>
+        <Route path='album' element={<AlbumPage/>}/>
       </Route>
 
       <Route path='/admin' element={<CheckRole><AdminLayout/></CheckRole>}>
