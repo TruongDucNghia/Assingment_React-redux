@@ -1,7 +1,23 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import $ from 'jquery'
 
 function Footer() {
+    useEffect(() =>{
+        $(window).scroll(function(event) {
+            var pos_body = $('html,body').scrollTop();
+            if(pos_body>500){
+                $('.back-to-top').addClass('show');
+            }
+            else{
+                $('.back-to-top').removeClass('show');
+            }
+        });
+        $('.back-to-top').click(function(event) {
+            $('html,body').animate({
+                scrollTop: 0},
+                500);
+        });
+    }, [])
     return (
         <div>
             <div>
