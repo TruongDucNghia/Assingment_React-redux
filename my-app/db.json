@@ -135,7 +135,7 @@
         "XL"
       ],
       "createdAt": 1649167480614,
-      "view": 2,
+      "view": 3,
       "id": 7
     },
     {
@@ -597,7 +597,7 @@
       "address": "việt nam",
       "phone": "091371238",
       "note": "lẹ giùm",
-      "status": 1,
+      "status": 0,
       "totalProducts": 114000000,
       "createdAt": 1649691768800,
       "id": 1
@@ -624,7 +624,7 @@
       "address": "phú thọ",
       "phone": "091371238",
       "note": "lẹ lẹ",
-      "status": 2,
+      "status": 1,
       "totalProducts": 1200000,
       "createdAt": 1649692774689,
       "id": 2
@@ -651,7 +651,7 @@
       "address": "phú tho",
       "phone": "0372559460",
       "note": "",
-      "status": 2,
+      "status": 1,
       "totalProducts": 70000000,
       "createdAt": 1649729938089,
       "id": 3

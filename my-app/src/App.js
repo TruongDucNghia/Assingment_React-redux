@@ -28,11 +28,8 @@ import ListOrder from './page/PageAdmin/order/listOrder';
 import DetailOrder from './page/PageAdmin/order/DetailOrder';
 import Search from './page/PageClient/Search';
 import ListUser from './page/PageAdmin/users/ListUser';
-import { useSelector } from 'react-redux';
 
 function App() {
-  const listUser = useSelector(state => state.user.value)
-  console.log(listUser);
   return (
     <Routes>
       <Route path='/' element={<WebsiteLayout/>}>
