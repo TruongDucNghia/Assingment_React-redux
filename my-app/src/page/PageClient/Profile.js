@@ -136,13 +136,13 @@ const Profile = () => {
                                                 <label className="sex__text" htmlFor>Giới tính</label>
                                                 <div className="DH__checkBox">
                                                     <div className="pretty p-default">
-                                                        <input {...register('gender', {required: true})} defaultChecked={user.gender.includes('1')} type="radio" value={'0'}  />
+                                                        <input {...register('gender', {required: true})} checked={user.gender.includes('1')} type="radio" value={'0'}  />
                                                         <div className="state p-info">
                                                             <label htmlFor="nam">Nam</label>
                                                         </div>
                                                     </div>
                                                     <div className="pretty p-default">
-                                                        <input {...register('gender', {required: true})} defaultChecked={user.gender.includes('0')} type="radio" value={'1'} />
+                                                        <input {...register('gender', {required: true})} checked={user.gender.includes('0')} type="radio" value={'1'} />
                                                         <div className="state p-info">
                                                             <label htmlFor="nu">Nữ</label>
                                                         </div>
