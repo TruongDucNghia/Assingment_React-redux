@@ -117,7 +117,7 @@
         "XL"
       ],
       "createdAt": 1649167112542,
-      "view": 35,
+      "view": 36,
       "id": 6
     },
     {
@@ -711,6 +711,49 @@
       "totalProducts": 2600000,
       "createdAt": 1649737146180,
       "id": 5
+    },
+    {
+      "order": [
+        {
+          "productId": 6,
+          "name": "Envy Look All Season Skirt",
+          "price": 10000000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167102/ara6q9pmihip6oylkhih.jpg",
+          "size": [
+            "XXL"
+          ],
+          "color": [
+            "xanh"
+          ],
+          "quantity": 1,
+          "userId": 1
+        },
+        {
+          "productId": 7,
+          "name": "Envy Look All Season Skirt 1",
+          "price": 10000000,
+          "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1649167481/oy34kcm6bkm29zoo7elt.jpg",
+          "color": [
+            "xanh",
+            "xanh"
+          ],
+          "size": [
+            "XXL",
+            "XXL"
+          ],
+          "quantity": 4,
+          "userId": 1
+        }
+      ],
+      "userId": 1,
+      "name": "Trương Nghĩa ",
+      "address": "phu tho",
+      "phone": "0372559460",
+      "note": "nhanh",
+      "status": 1,
+      "totalProducts": 50000000,
+      "createdAt": 1649931164610,
+      "id": 6
     }
   ]
 }
