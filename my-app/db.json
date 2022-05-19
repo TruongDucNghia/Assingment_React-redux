@@ -42,7 +42,7 @@
         "S"
       ],
       "createdAt": 1649425767063,
-      "view": 13,
+      "view": 24,
       "id": 1
     },
     {
@@ -99,7 +99,7 @@
         "XL"
       ],
       "createdAt": 1649166967053,
-      "view": 91,
+      "view": 101,
       "id": 5
     },
     {
@@ -117,7 +117,7 @@
         "XL"
       ],
       "createdAt": 1649167112542,
-      "view": 36,
+      "view": 45,
       "id": 6
     },
     {
@@ -135,7 +135,7 @@
         "XL"
       ],
       "createdAt": 1649167480614,
-      "view": 3,
+      "view": 4,
       "id": 7
     },
     {
@@ -153,7 +153,7 @@
         "XL"
       ],
       "createdAt": 1649167142287,
-      "view": 23,
+      "view": 26,
       "id": 8
     },
     {
@@ -171,7 +171,7 @@
         "XL"
       ],
       "createdAt": 1649169166222,
-      "view": 63,
+      "view": 69,
       "id": 9
     },
     {
@@ -228,7 +228,7 @@
         "S"
       ],
       "createdAt": 1649167234717,
-      "view": 0,
+      "view": 1,
       "id": 12
     },
     {
@@ -323,7 +323,7 @@
         "S"
       ],
       "createdAt": 1649167310181,
-      "view": 27,
+      "view": 28,
       "id": 17
     },
     {
@@ -420,7 +420,7 @@
         "XL"
       ],
       "createdAt": 1649262066679,
-      "view": 27,
+      "view": 28,
       "id": 22
     },
     {
@@ -754,6 +754,24 @@
       "totalProducts": 50000000,
       "createdAt": 1649931164610,
       "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "content": "good good",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1652949620/vkbkapbkr6y2ofxfaiec.jpg",
+      "username": "Trương Đức Hưng",
+      "userId": 3,
+      "createdAt": 1652949620558,
+      "id": 1
+    },
+    {
+      "content": "very bad",
+      "img": "",
+      "username": "Trương Đức Hưng",
+      "userId": 3,
+      "createdAt": 1652949634347,
+      "id": 2
     }
   ]
 }

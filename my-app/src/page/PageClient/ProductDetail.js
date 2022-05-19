@@ -7,6 +7,7 @@ import Slider from 'react-slick'
 import { useForm } from 'react-hook-form'
 import { toast, ToastContainer } from 'react-toastify'
 import { addCarts } from '../../features/CartSlice'
+import Comment from '../../components/clients/home/Comment'
 
 const ProductDetail = () => {
     const settings = {
@@ -75,7 +76,7 @@ const ProductDetail = () => {
             increaseView(data.view)
         }
         getProduct()
-    }, [])
+    }, [id])
 
     const increaseView = async (view) => {
         await updateProduct({ id, view: view + 1 })
@@ -305,6 +306,8 @@ const ProductDetail = () => {
                             )}
                         </Slider>
                     </div>
+                    <p class="vclll">Bình luận của khách hàng</p>
+                    <Comment/>
                     <div className="sp-title">
                         <p className="vclll">Hình ảnh chi tiết</p>
                         <div className="full-images">
