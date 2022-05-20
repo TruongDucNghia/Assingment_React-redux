@@ -2,13 +2,13 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { addComments, getComments } from '../../../features/CommentSlice'
-const Comment = () => {
+import { addComments, getCommentId } from '../../../features/CommentSlice'
+const Comment = ({productId}) => {
     const dispatch = useDispatch()
     const isUser = useSelector(state => state.user.value)
     useEffect(() => {
-        dispatch(getComments())
-    }, [])
+        dispatch(getCommentId(productId))
+    }, [productId])
     const listComment = useSelector(state => state.comment.value)
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
     const [img, setImg] = useState('')
@@ -20,10 +20,11 @@ const Comment = () => {
             const username = isUser.username
             const userId = isUser.id
             const createdAt = new Date().getTime()
-            const datas = { ...data, img, username, userId, createdAt }
+            const datas = { ...data, img, username, userId, createdAt, productId: Number(productId)}
             dispatch(addComments(datas))
             reset()
             setImg('')
+            dispatch(getCommentId(productId))
         }
     }
     async function handleGetImg(e) {
@@ -66,7 +67,7 @@ const Comment = () => {
             </div>
             <div className="form__content">
                 <div className="comment__itemAll">
-                    {listComment.map((item, index) =>
+                    {listComment?.comments?.map((item, index) =>
                         <div style={{marginTop: '15px'}} key={index} className="item__comment">
                             <div className="item__ava">
                                 <img src="https://toigingiuvedep.vn/wp-content/uploads/2021/01/avatar-dep-cute.jpg" alt width="100%" />

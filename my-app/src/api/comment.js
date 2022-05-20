@@ -14,3 +14,8 @@ export const listComment = () =>{
     const url = `/comments`
     return instance.get(url)
 }
+
+export const getCommentsId = (id) =>{
+    const url = `/products/${id}?_embed=comments`
+    return instance.get(url)
+}

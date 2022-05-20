@@ -307,7 +307,7 @@ const ProductDetail = () => {
                         </Slider>
                     </div>
                     <p class="vclll">Bình luận của khách hàng</p>
-                    <Comment/>
+                    <Comment productId={id}/>
                     <div className="sp-title">
                         <p className="vclll">Hình ảnh chi tiết</p>
                         <div className="full-images">
