@@ -30,6 +30,8 @@ import Search from './page/PageClient/Search';
 import ListUser from './page/PageAdmin/users/ListUser';
 import NotFound from './page/PageClient/NotFound';
 import AlbumPage from './page/PageClient/AlbumPage';
+import ListComment from './page/PageAdmin/comment/ListComment';
+import DetailComment from './page/PageAdmin/comment/DetailComment';
 
 function App() {
   return (
@@ -83,6 +85,12 @@ function App() {
         <Route path="users">
           <Route index element={<Navigate to="list"/>}/>
           <Route path="list" element={<ListUser/>} />   
+        </Route>
+
+        <Route path="comments">
+          <Route index element={<Navigate to="list"/>}/>
+          <Route path="list" element={<ListComment/>} /> 
+          <Route path=':id/detail' element={<DetailComment/>}/>  
         </Route>
 
       </Route>

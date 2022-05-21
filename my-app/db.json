@@ -42,7 +42,7 @@
         "S"
       ],
       "createdAt": 1649425767063,
-      "view": 40,
+      "view": 41,
       "id": 1
     },
     {
@@ -135,7 +135,7 @@
         "XL"
       ],
       "createdAt": 1649167480614,
-      "view": 4,
+      "view": 6,
       "id": 7
     },
     {
@@ -153,7 +153,7 @@
         "XL"
       ],
       "createdAt": 1649167142287,
-      "view": 27,
+      "view": 29,
       "id": 8
     },
     {
@@ -171,7 +171,7 @@
         "XL"
       ],
       "createdAt": 1649169166222,
-      "view": 69,
+      "view": 73,
       "id": 9
     },
     {
@@ -190,7 +190,7 @@
         "S"
       ],
       "createdAt": 1649167195894,
-      "view": 6,
+      "view": 7,
       "id": 10
     },
     {
@@ -247,7 +247,7 @@
         "S"
       ],
       "createdAt": 1649167255753,
-      "view": 4,
+      "view": 6,
       "id": 13
     },
     {
@@ -266,7 +266,7 @@
         "S"
       ],
       "createdAt": 1649167266108,
-      "view": 2,
+      "view": 3,
       "id": 14
     },
     {
@@ -342,7 +342,7 @@
         "S"
       ],
       "createdAt": 1649167327771,
-      "view": 11,
+      "view": 12,
       "id": 18
     },
     {
@@ -441,7 +441,7 @@
         "M"
       ],
       "createdAt": 1649752404216,
-      "view": 4,
+      "view": 5,
       "id": 23
     }
   ],
@@ -794,15 +794,6 @@
       "id": 4
     },
     {
-      "content": "ok ổn :))",
-      "img": "",
-      "username": "Trương Đức Hưng",
-      "userId": 3,
-      "createdAt": 1653057832739,
-      "productId": 12,
-      "id": 5
-    },
-    {
       "content": "ngon ",
       "img": "",
       "username": "Trương Đức Hưng",
@@ -812,31 +803,22 @@
       "id": 6
     },
     {
-      "content": "tốt",
+      "content": "tốt :)",
+      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1653110342/igeogxl9gamhauquv7ly.jpg",
+      "username": "Trương Đức Hưng",
+      "userId": 3,
+      "createdAt": 1653110347070,
+      "productId": 23,
+      "id": 10
+    },
+    {
+      "content": "làm sao",
       "img": "",
       "username": "Trương Đức Hưng",
       "userId": 3,
-      "createdAt": 1653057844648,
-      "productId": 12,
-      "id": 7
-    },
-    {
-      "content": "? ngon",
-      "img": "",
-      "username": "Trương Nghĩa ",
-      "userId": 1,
-      "createdAt": 1653057885988,
-      "productId": 13,
-      "id": 8
-    },
-    {
-      "content": "ủa e",
-      "img": "",
-      "username": "Trương Nghĩa ",
-      "userId": 1,
-      "createdAt": 1653058668034,
-      "productId": 4,
-      "id": 9
+      "createdAt": 1653110355577,
+      "productId": 18,
+      "id": 11
     }
   ]
 }

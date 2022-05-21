@@ -55,6 +55,15 @@ const Sidebar = (props) => {
                         </NavLink>
                         
                     </li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" data-bs-toggle="collapse" to="/admin/comments" aria-expanded="false" aria-controls="form-elements">
+                            <i className="menu-icon mdi mdi-comment" />
+                            <span className="menu-title">Comment</span>
+                            <i className="menu-arrow" />
+                        </NavLink>
+                        
+                    </li>
                 
  
                 </ul>
